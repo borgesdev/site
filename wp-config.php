@@ -15,6 +15,9 @@
  */
 
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
+
+
+if ($_SERVER['HTTP_HOST']=='localhost') {
 /** O nome do banco de dados do WordPress */
 define('DB_NAME', 'borges');
 
@@ -26,7 +29,20 @@ define('DB_PASSWORD', '');
 
 /** nome do host do MySQL */
 define('DB_HOST', 'localhost');
+}else{
+/** O nome do banco de dados do WordPress */
+define('DB_NAME', 'site1378649640');
 
+/** Usuário do banco de dados MySQL */
+define('DB_USER', 'site1378649640');
+
+/** Senha do banco de dados MySQL */
+define('DB_PASSWORD', 'b0rg35');
+
+/** nome do host do MySQL */
+define('DB_HOST', 'mysql01.site1378649640.hospedagemdesites.ws');
+  
+}
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8');
 
