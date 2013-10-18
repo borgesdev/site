@@ -46,6 +46,9 @@ if (!current_user_can('manage_options')) {
 
     // Retira o logo do WP do topo
     $wp_admin_bar->remove_menu('wp-logo');
+    
+     $wp_admin_bar->remove_menu('updates'); 
+    
   }
   add_action('wp_before_admin_bar_render', 'customizeTopMenu');
 
@@ -125,8 +128,9 @@ if (!current_user_can('manage_options')) {
   
   // Retira o link de exclusão e edição de slug se for da categoria Conceito
   function escondeDelLink() {
-    $categoria = get_the_category();
-    if ($categoria[0]->term_id == _CONCEITO) {
+    echo '<style type="text/css">#wp-admin-bar-view { display: none; }</style>';
+    global $post;   
+    if ($post->ID == _QUEM_SOMOS || $post->ID == _CONTATO) {
       echo '<style type="text/css">.deletion, #edit-slug-box { display: none; }</style>';
     }
   }
@@ -168,7 +172,7 @@ if (!current_user_can('manage_options')) {
 
 
     // Esconde o botão excluir e ver da listagem, se for institucional
-    if (isset($_GET['cat']) && $_GET['cat'] == _CONCEITO) {
+    if (isset($_GET['cat']) && $_GET['cat'] == _QUEM_SOMOS) {
       $customUIScript .= '
         $(".trash").remove();
         $(".view").remove();
@@ -216,7 +220,7 @@ if (!current_user_can('manage_options')) {
 //Altera o logo do login 
 function custom_login_logo() {
   echo '<style type="text/css">' .
-  'h1 a { background-image:url(' . get_bloginfo('template_directory') . '/imgs/logo.jpg) !important; width: 319px !important; padding-bottom: 131px !important; background-size: auto !important; border: 1px solid #ccc}' .
+  'h1 a { background-image:url(' . get_bloginfo('template_directory') . '/imgs/logo.jpg) !important; width: 319px !important; padding-bottom: 131px !important; background-size: auto !important; border: 0; height: auto !important}' .
   '</style>';
 }
 
