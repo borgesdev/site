@@ -17,7 +17,7 @@
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 
 
-if ($_SERVER['HTTP_HOST'] == 'localhost') {
+if ($_SERVER['HTTP_HOST'] == 'localhost' || strpos($_SERVER['HTTP_HOST'], '192.168')!==false) {
   /** O nome do banco de dados do WordPress */
   define('DB_NAME', 'site13786496401');
 
