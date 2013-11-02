@@ -11,21 +11,21 @@ get_template_part('incs/topo');
   <div class='destaques-home float-left'>
 
     <article>
-    <h2>Perda Auditiva</h2>
-    <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
-</article>
-    
-    
+      <h2>Perda Auditiva</h2>
+      <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
+    </article>
+
+
     <article>
-    <h2>Perda Auditiva</h2>
-    <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
-</article>
-    
-    
+      <h2>Perda Auditiva</h2>
+      <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
+    </article>
+
+
     <article>
-    <h2>Perda Auditiva</h2>
-    <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
-</article>
+      <h2>Perda Auditiva</h2>
+      <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
+    </article>
   </div>
 
 
@@ -37,12 +37,13 @@ get_template_part('incs/topo');
       the_post_thumbnail();
     }
     ?>
+    <img src="<?bloginfo('template_url')?>/imgs/slide.jpg" />
   </div>   
 
   <div class="clear"></div>
   <div class='titulo'>
-  <span class="linha-titulo"> </span>
-    <h2>Notícias</h2>
+    <span class="linha-titulo"> </span>
+    <h2 class="azul-borges">Notícias</h2>
   </div>
   <span class="linha-azul"></span>
 
@@ -72,7 +73,7 @@ get_template_part('incs/topo');
     ?>
   </div>
   <div class="clear"></div>
- 
+
 
 
 

@@ -5,7 +5,4 @@
  * and open the template in the editor.
  */
 ?>
-
-
-</div>
-<!-- Fecha a div com a classe="site" aberta em topo.php -->
+Aqui ficará o resultado das buscas

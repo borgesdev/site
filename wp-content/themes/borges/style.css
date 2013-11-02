@@ -10,24 +10,66 @@ root {
   display: block;
 }
 
-* { padding: 0; margin: 0;   font-family: verdana;  color: #ccc; font-size: 11px }
+* { padding: 0; margin: 0; font-family: verdana;  color: #777; font-size: 11px }
 
 p {
 }
 
 
+.float-right { float: right }
+.float-left {float: left}
+.clear { clear: both}
+
+a { text-decoration: none;}
+a:hover { text-decoration: underline}
+
+.site { width: 960px; margin: 12px auto}
+
+.azul-borges { color: #5e789d}
+.azul-borges-bg { background-color: #5e789d}
+.marrom-borges { color: #a28f55}
+.marrom-borges-bg { background-color: #a28f55}
+
+.logo-topo a { display: block; color: transparent; background: url('imgs/logo.png') no-repeat; width: 275px; height: 118px}
+
+.social { margin: 12px 0px 6px 0px}
+.social a { display: inline-block; color: transparent;  width: 30px; height: 25px; background: url('imgs/social.png') }
+
+.social .twitter { background-position: 0px 0px;}
+.social .facebook { background-position: 32px 0px; }
+
+.menu-topo ul { list-style-type: none;} 
+.menu-topo ul li { display: inline-block; width: 105px; height: 32px;text-align: center;padding: 16px 0px 0px 0px; position: relative}
+.menu-topo ul li:hover { cursor: pointer}
+
+.menu-topo ul li a { color: #ddd; }
+.menu-topo ul li a:hover { color: #fff; text-decoration: none }
+
+.corte {border-bottom: 14px #5e789d solid; display: inline-block; float: left; border-left: 14px #fff solid; position: absolute; top: 0px; left: 0px;}
+
+.busca-topo { margin: 14px 0px 0px 0px; width: 204px}
+.busca-topo input[type=text] { width: 168px; height: 26px; border: 1px solid #a28f55; display: block; float: left}
+.busca-topo input[type=submit] { width: 28px; height: 28px; background: url('imgs/busca.png'); border: 0px; margin: 0px 6px 0px 0px;  display: block; float: left}
+
+.conteudo { margin: 10px 0px}
+
+.destaques-home { width: 258px;}
+
+.slideshow img { width: 702px; height: 385px}
+
 .titulo h2 {
   line-height: 100%;
-  border-left: 4px solid #000;
+  border-left: 3px solid #a28f55;
   display: table-cell;
   margin: 0;
-  border-bottom: 4px solid #000;
+  border-bottom: 3px solid #a28f55;
   border-radius: 8px 0 0px 8px;
-  border-top: 4px solid #000;
-  padding: 4px;
+  border-top: 3px solid #a28f55;
+  padding: 8px;
   font-size: 16px;
+  font-weight: normal;
 }
 
 .titulo { position: relative;}
 
-.linha-titulo { border-bottom: 4px solid #000; display: block; position: relative; top: 4px; left: 8px }
+.linha-titulo { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 8px }
