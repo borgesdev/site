@@ -1,5 +1,6 @@
 <?php
-/** 
+
+/**
  * As configurações básicas do WordPress.
  *
  * Esse arquivo contém as seguintes configurações: configurações de MySQL, Prefixo de Tabelas,
@@ -13,35 +14,33 @@
  *
  * @package WordPress
  */
-
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 
 
-if ($_SERVER['HTTP_HOST']=='localhost') {
-/** O nome do banco de dados do WordPress */
-define('DB_NAME', 'borges');
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+  /** O nome do banco de dados do WordPress */
+  define('DB_NAME', 'site13786496401');
 
-/** Usuário do banco de dados MySQL */
-define('DB_USER', 'root');
+  /** Usuário do banco de dados MySQL */
+  define('DB_USER', 'site13786496401');
 
-/** Senha do banco de dados MySQL */
-define('DB_PASSWORD', '');
+  /** Senha do banco de dados MySQL */
+  define('DB_PASSWORD', 'b0rg35d3v');
 
-/** nome do host do MySQL */
-define('DB_HOST', 'localhost');
-}else{
-/** O nome do banco de dados do WordPress */
-define('DB_NAME', 'site1378649640');
+  /** nome do host do MySQL */
+  define('DB_HOST', 'mysql02.site1378649640.hospedagemdesites.ws');
+} else {
+  /** O nome do banco de dados do WordPress */
+  define('DB_NAME', 'site1378649640');
 
-/** Usuário do banco de dados MySQL */
-define('DB_USER', 'site1378649640');
+  /** Usuário do banco de dados MySQL */
+  define('DB_USER', 'site1378649640');
 
-/** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'b0rg35');
+  /** Senha do banco de dados MySQL */
+  define('DB_PASSWORD', 'b0rg35');
 
-/** nome do host do MySQL */
-define('DB_HOST', 'mysql01.site1378649640.hospedagemdesites.ws');
-  
+  /** nome do host do MySQL */
+  define('DB_HOST', 'mysql01.site1378649640.hospedagemdesites.ws');
 }
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8');
@@ -49,7 +48,7 @@ define('DB_CHARSET', 'utf8');
 /** O tipo de collate do banco de dados. Não altere isso se tiver dúvidas. */
 define('DB_COLLATE', '');
 
-/**#@+
+/* * #@+
  * Chaves únicas de autenticação e salts.
  *
  * Altere cada chave para um frase única!
@@ -58,16 +57,16 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'V?EvElJCAA}lh@BDCFgeVnZ3UI/$}^WiN-{?+Y|hmq]Po-?6!=,(w/C g-~;UWne');
-define('SECURE_AUTH_KEY',  'lB{ly.BallFFl^4{ErBkq01#Dj?LG+lmyJlpgoA8-L78[8TyVry>XX-s|MCK*0aH');
-define('LOGGED_IN_KEY',    'mmkX|rL62#cPYo`RP*^G-AjUEdf*Vs:zb?t5)feh{1v^SqUa0e6CS6-oUT9w3>P#');
-define('NONCE_KEY',        '6dy:M,1*0G0a|t#eFtCH#Yf|+`yIrP)v5E^_2+,Tv6N1@4Z45d*ize kK>8SP/Vo');
-define('AUTH_SALT',        '5?KX-%SZVbqN{XRvzl@<Vd69Dx;0Bw{P|&R3s8H!+5a4Mg;kab/%++fBfaKLG8#Z');
+define('AUTH_KEY', 'V?EvElJCAA}lh@BDCFgeVnZ3UI/$}^WiN-{?+Y|hmq]Po-?6!=,(w/C g-~;UWne');
+define('SECURE_AUTH_KEY', 'lB{ly.BallFFl^4{ErBkq01#Dj?LG+lmyJlpgoA8-L78[8TyVry>XX-s|MCK*0aH');
+define('LOGGED_IN_KEY', 'mmkX|rL62#cPYo`RP*^G-AjUEdf*Vs:zb?t5)feh{1v^SqUa0e6CS6-oUT9w3>P#');
+define('NONCE_KEY', '6dy:M,1*0G0a|t#eFtCH#Yf|+`yIrP)v5E^_2+,Tv6N1@4Z45d*ize kK>8SP/Vo');
+define('AUTH_SALT', '5?KX-%SZVbqN{XRvzl@<Vd69Dx;0Bw{P|&R3s8H!+5a4Mg;kab/%++fBfaKLG8#Z');
 define('SECURE_AUTH_SALT', 'Yg-:T*VE!=YitwsDtFkTNm1+pepyGs)~4k?+4-?dF+nQ 3zfrm MxDe1;3:}_j+f');
-define('LOGGED_IN_SALT',   '}tApy,iEp=#+i*mktymZIjYDz$Siv?=LMLNkqvru-+3+W#n_85@4B;]bye/U+;Cn');
-define('NONCE_SALT',       'klx@$-!+uo+-lA`5*1C*Ar{RHxi }+/+9<PlEPp4u@<P$Ll&aPE~/ZuL0tcSdvqj');
+define('LOGGED_IN_SALT', '}tApy,iEp=#+i*mktymZIjYDz$Siv?=LMLNkqvru-+3+W#n_85@4B;]bye/U+;Cn');
+define('NONCE_SALT', 'klx@$-!+uo+-lA`5*1C*Ar{RHxi }+/+9<PlEPp4u@<P$Ll&aPE~/ZuL0tcSdvqj');
 
-/**#@-*/
+/* * #@- */
 
 /**
  * Prefixo da tabela do banco de dados do WordPress.
@@ -75,7 +74,7 @@ define('NONCE_SALT',       'klx@$-!+uo+-lA`5*1C*Ar{RHxi }+/+9<PlEPp4u@<P$Ll&aPE~
  * Você pode ter várias instalações em um único banco de dados se você der para cada um um único
  * prefixo. Somente números, letras e sublinhados!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
  * O idioma localizado do WordPress é o inglês por padrão.
@@ -99,8 +98,8 @@ define('WP_DEBUG', false);
 /* Isto é tudo, pode parar de editar! :) */
 
 /** Caminho absoluto para o diretório WordPress. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
-	
+if (!defined('ABSPATH'))
+  define('ABSPATH', dirname(__FILE__) . '/');
+
 /** Configura as variáveis do WordPress e arquivos inclusos. */
 require_once(ABSPATH . 'wp-settings.php');
