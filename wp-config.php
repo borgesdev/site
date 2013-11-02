@@ -19,28 +19,28 @@
 
 if ($_SERVER['HTTP_HOST'] == 'localhost' || strpos($_SERVER['HTTP_HOST'], '192.168')!==false) {
   /** O nome do banco de dados do WordPress */
-  define('DB_NAME', 'site13786496401');
+  define('DB_NAME', 'sidfhdf401');
 
   /** Usuário do banco de dados MySQL */
-  define('DB_USER', 'site13786496401');
+  define('DB_USER', 'sifhdhf96401');
 
   /** Senha do banco de dados MySQL */
-  define('DB_PASSWORD', 'b0rg35d3v');
+  define('DB_PASSWORD', '0987654sd');
 
   /** nome do host do MySQL */
   define('DB_HOST', 'mysql02.site1378649640.hospedagemdesites.ws');
 } else {
   /** O nome do banco de dados do WordPress */
-  define('DB_NAME', 'site1378649640');
+  define('DB_NAME', 'sidfhd0');
 
   /** Usuário do banco de dados MySQL */
-  define('DB_USER', 'site1378649640');
+  define('DB_USER', 'sitefdhdf640');
 
   /** Senha do banco de dados MySQL */
-  define('DB_PASSWORD', 'b0rg35');
+  define('DB_PASSWORD', 'bhdfhfdhd');
 
   /** nome do host do MySQL */
-  define('DB_HOST', 'mysql01.site1378649640.hospedagemdesites.ws');
+  define('DB_HOST', 'mysfdhdfhfdhes.ws');
 }
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8');
