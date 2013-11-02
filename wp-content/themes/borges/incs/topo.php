@@ -18,7 +18,6 @@
       <nav class="float-right">
         <ul>
           <li class="azul-borges-bg"><div class="corte"></div><a href="#">Home</a></li>
-          
           <li class="azul-borges-bg"><div class="corte"></div><a href="#">Quem somos</a></li>
           <li class="azul-borges-bg"><div class="corte"></div><a href="#">Corpo Clínico</a></li>
           <li class="azul-borges-bg"><div class="corte"></div><a href="#">Exames</a></li>

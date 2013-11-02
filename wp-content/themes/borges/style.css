@@ -53,8 +53,11 @@ a:hover { text-decoration: underline}
 
 .conteudo { margin: 10px 0px}
 
-.destaques-home { width: 258px;}
-
+.destaques-home { width: 258px; margin-top: 50px}
+.destaques-home article { margin-bottom: 30px}
+.destaques-home article h2 { font-size: 16px; font-weight: normal; }
+.destaques-home a { font-size: 12px}
+.slideshow { margin: 0px 0px 26px 0px }
 .slideshow img { width: 702px; height: 385px}
 
 .titulo h2 {
@@ -66,10 +69,22 @@ a:hover { text-decoration: underline}
   border-radius: 8px 0 0px 8px;
   border-top: 3px solid #a28f55;
   padding: 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
 }
 
-.titulo { position: relative;}
+.titulo { position: relative; margin-bottom: 28px}
 
-.linha-titulo { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 8px }
+.linha-titulo { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 8px; width: 952px }
+
+.linha-boxes article { border-top: 3px #5e789d solid; padding-top: 8px; width: 180px; margin-right: 15px}
+.linha-boxes article h2 { margin: 10px 0px 10px 0px; font-weight: normal}
+.linha-boxes article a { color: #D54E21;}
+
+.todas-noticias { width: 132px; background: url('imgs/setas.png') no-repeat center right; margin-top: 30px }
+.todas-noticias a { font-size: 13px; }
+
+.rodape nav ul { list-style-type: none}
+.rodape nav ul li { display: inline-block; width: 136px; border-right: 1px solid #d5d5d5; height: 42px; margin-top: 60px }
+.rodape nav ul li a { font-size: 14px}
+.tarja-azul-rodape { height: 124px; width: 100%;  margin-top: 48px}

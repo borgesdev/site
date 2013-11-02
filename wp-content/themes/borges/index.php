@@ -11,19 +11,19 @@ get_template_part('incs/topo');
   <div class='destaques-home float-left'>
 
     <article>
-      <h2>Perda Auditiva</h2>
+      <h2 class="azul-borges">Perda Auditiva</h2>
       <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
     </article>
 
 
     <article>
-      <h2>Perda Auditiva</h2>
+      <h2 class="azul-borges">Perda Auditiva</h2>
       <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
     </article>
 
 
     <article>
-      <h2>Perda Auditiva</h2>
+      <h2 class="azul-borges">Perda Auditiva</h2>
       <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
     </article>
   </div>
@@ -37,7 +37,7 @@ get_template_part('incs/topo');
       the_post_thumbnail();
     }
     ?>
-    <img src="<?bloginfo('template_url')?>/imgs/slide.jpg" />
+    <img src="<? bloginfo('template_url') ?>/imgs/slide.jpg" />
   </div>   
 
   <div class="clear"></div>
@@ -71,10 +71,37 @@ get_template_part('incs/topo');
       $i++;
     }
     ?>
+
+    <article class="float-left">
+      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
+      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
+      <a href="#">Saiba +</a>
+    </article>    
+    <article class="float-left">
+      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
+      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
+      <a href="#">Saiba +</a>
+    </article>    
+    <article class="float-left">
+      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
+      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
+      <a href="#">Saiba +</a>
+    </article>    
+    <article class="float-left">
+      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
+      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
+      <a href="#">Saiba +</a>
+    </article>    
+    <article class="float-left" style="margin-right: 0px">
+      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
+      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
+      <a href="#">Saiba +</a>
+    </article>    
+
   </div>
   <div class="clear"></div>
 
-
+  <div class="todas-noticias"><a href="#" class="azul-borges">Todas as notícias</a></div>
 
 
 </div>
