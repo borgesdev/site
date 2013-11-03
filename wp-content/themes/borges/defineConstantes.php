@@ -10,4 +10,7 @@ define('_UNIDADES', 6);
 define('_QUEM_SOMOS', 6);
 define('_CONTATO', 8);
 
+// Tags
+define ('_TAG_DESTAQUE', 8);
+
 ?>

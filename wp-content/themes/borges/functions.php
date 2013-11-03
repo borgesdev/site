@@ -1,5 +1,8 @@
 <?php
 
+// Registra um menu para o site
+register_nav_menu('principal', 'principal');
+
 // Define as constantes do projeto 
 require_once ('defineConstantes.php');
 
@@ -27,6 +30,23 @@ $args = array(
 );
 register_post_type('slide', $args);
 
+
+/* Personaliza o get_the_excerpt */
+function getTheExcerpt( $output ) {
+  $resumo = str_replace('[&hellip;]', '', $output);
+  $resumoPalavras = explode(' ', $resumo);
+  $resumoNumPalavras = count($resumoPalavras);
+  $excerpt = '';
+  $i = 0;
+  while ($i<15 && $i<$resumoNumPalavras){
+    $excerpt .= $resumoPalavras[$i].' ';
+    $i++;
+  }
+  $excerpt .= '...';
+  
+  return $excerpt;
+}
+add_filter( 'get_the_excerpt', 'getTheExcerpt' );
 
 //********************************************************
 // Personalizações para o usuário Editor (e qualquer outro que não tenha privilégios de acessar as opções do blog)

@@ -6,30 +6,27 @@
         Purpose of the stylesheet follows.
 */
 
-root { 
-  display: block;
-}
 
+
+/* Estilos de elementos */
 * { padding: 0; margin: 0; font-family: verdana;  color: #777; font-size: 11px }
-
-p {
-}
-
-
-.float-right { float: right }
-.float-left {float: left}
-.clear { clear: both}
-
 a { text-decoration: none;}
 a:hover { text-decoration: underline}
 
+/* Estilos de uso geral */
+.float-right { float: right }
+.float-left {float: left}
+.clear { clear: both}
+.no-mg-right { margin-right: 0px !important}
 .site { width: 960px; margin: 12px auto}
 
+/* Estilos reaproveitados ao longo do site */
 .azul-borges { color: #5e789d}
 .azul-borges-bg { background-color: #5e789d}
 .marrom-borges { color: #a28f55}
 .marrom-borges-bg { background-color: #a28f55}
 
+/* Estilo de seções específicas */
 .logo-topo a { display: block; color: transparent; background: url('imgs/logo.png') no-repeat; width: 275px; height: 118px}
 
 .social { margin: 12px 0px 6px 0px}
@@ -53,25 +50,14 @@ a:hover { text-decoration: underline}
 
 .conteudo { margin: 10px 0px}
 
-.destaques-home { width: 258px; margin-top: 50px}
+.destaques-home { width: 240px; margin-top: 50px}
 .destaques-home article { margin-bottom: 30px}
 .destaques-home article h2 { font-size: 16px; font-weight: normal; }
 .destaques-home a { font-size: 12px}
 .slideshow { margin: 0px 0px 26px 0px }
 .slideshow img { width: 702px; height: 385px}
 
-.titulo h2 {
-  line-height: 100%;
-  border-left: 3px solid #a28f55;
-  display: table-cell;
-  margin: 0;
-  border-bottom: 3px solid #a28f55;
-  border-radius: 8px 0 0px 8px;
-  border-top: 3px solid #a28f55;
-  padding: 8px;
-  font-size: 18px;
-  font-weight: normal;
-}
+.titulo h2 {  line-height: 100%;  border-left: 3px solid #a28f55;display: table-cell;margin: 0;border-bottom: 3px solid #a28f55;border-radius: 8px 0 0px 8px;border-top: 3px solid #a28f55;padding: 8px;font-size: 18px;font-weight: normal;}
 
 .titulo { position: relative; margin-bottom: 28px}
 

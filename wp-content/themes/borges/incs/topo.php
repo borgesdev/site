@@ -8,21 +8,29 @@
 
 
     <div class="menu-topo float-right">
-      
+
       <div class="social float-right">
         <a href="#" title="Twitter" class="twitter">Twitter</a>
         <a href="#" title="Facebook" class="facebook">FB</a>
       </div>
       <div class="clear"></div>
-      
+
       <nav class="float-right">
         <ul>
-          <li class="azul-borges-bg"><div class="corte"></div><a href="#">Home</a></li>
-          <li class="azul-borges-bg"><div class="corte"></div><a href="#">Quem somos</a></li>
-          <li class="azul-borges-bg"><div class="corte"></div><a href="#">Corpo Clínico</a></li>
-          <li class="azul-borges-bg"><div class="corte"></div><a href="#">Exames</a></li>
-          <li class="azul-borges-bg"><div class="corte"></div><a href="#">Notícias</a></li>
-          <li class="azul-borges-bg"><div class="corte"></div><a href="#">Contato</a></li>
+          <?php
+          // Traz os itens do menu, antes é necessário achar o ID do menu através de get_nav_menu_locations()
+          $locations = get_nav_menu_locations();
+          $menuItens = wp_get_nav_menu_items($locations['principal']);
+          $urlAtual = get_permalink();
+          $classeAplicada = false;
+          foreach ($menuItens as $menuItem) {
+            // Retira a palavra "category" da URL (melhor para SEO)
+            $url = str_replace('category/', '', $menuItem->url);
+            ?>
+            <li class="azul-borges-bg"><div class="corte"></div><a href="<?= $menuItem->url ?>"><?= $menuItem->title ?></a></li>
+            <?php
+          }
+          ?>          
         </ul>
       </nav>
     </div>

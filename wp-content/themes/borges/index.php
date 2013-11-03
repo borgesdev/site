@@ -1,6 +1,6 @@
 <?
-/* if (!is_user_logged_in())
-  die(header('Location: '.  get_bloginfo('url').'/embreve.php')); */
+if (!is_user_logged_in())
+  die(header('Location: '.  get_bloginfo('url').'/embreve.php')); 
 get_template_part('incs/head');
 get_template_part('incs/topo');
 ?>
@@ -9,23 +9,21 @@ get_template_part('incs/topo');
 
 
   <div class='destaques-home float-left'>
+    <?
+    // Traz as notícias marcadas como destaque 
+    $wp_query = new WP_Query(array('cat' => _NOTICIAS, 'posts_per_page' => 3, 'tag_in' => _TAG_DESTAQUE));
+    $i = 0;
+    while (have_posts()) {
+      the_post();
+      ?>    
 
-    <article>
-      <h2 class="azul-borges">Perda Auditiva</h2>
-      <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
-    </article>
+      <article>
+        <h2 class="azul-borges"><? the_title() ?></h2>
+        <a href='<? the_permalink() ?>'><?= get_the_excerpt() ?></a>
+      </article>
 
+    <? } ?>
 
-    <article>
-      <h2 class="azul-borges">Perda Auditiva</h2>
-      <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
-    </article>
-
-
-    <article>
-      <h2 class="azul-borges">Perda Auditiva</h2>
-      <a href='#'>Saiba mais sobre blabalbalbalablabalbalbalabl</a>
-    </article>
   </div>
 
 
@@ -50,58 +48,29 @@ get_template_part('incs/topo');
   <div class="linha-boxes">
 
     <?
-    $wp_query = new WP_Query(array('cat' => _NOTICIAS, 'posts_per_page' => 4));
+    $wp_query = new WP_Query(array('cat' => _NOTICIAS, 'posts_per_page' => 5, 'tag__not_in' => _TAG_DESTAQUE));
     $i = 0;
     while (have_posts()) {
       the_post();
-      $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
       ?>
 
-      <article <?= $classe ?>>
-        <a href="<? the_permalink() ?>">
-          <?
-          if (has_post_thumbnail()) {
-            ?><div class="img-box"><? the_post_thumbnail(); ?> </div> <?
-          }
-          ?>
-          <h2 class="seta-azul fonte-textos"><? the_title() ?></h2>
-        </a>
-      </article>
+      <article class="float-left <?= $i == 4 ? 'no-mg-right' : ''; ?>">
+        <? if (has_post_thumbnail()) { ?>
+          <div class="img-box"><? the_post_thumbnail() ?></div> 
+        <? } ?>
+        <h2><? the_title() ?></h2>
+        <a href="<? the_permalink() ?>">Saiba +</a>
+      </article>   
+
       <?
       $i++;
     }
-    ?>
-
-    <article class="float-left">
-      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
-      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
-      <a href="#">Saiba +</a>
-    </article>    
-    <article class="float-left">
-      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
-      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
-      <a href="#">Saiba +</a>
-    </article>    
-    <article class="float-left">
-      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
-      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
-      <a href="#">Saiba +</a>
-    </article>    
-    <article class="float-left">
-      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
-      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
-      <a href="#">Saiba +</a>
-    </article>    
-    <article class="float-left" style="margin-right: 0px">
-      <div class="img-box"><img src="<? bloginfo('template_url') ?>/imgs/noticia.png"/></div> 
-      <h2>Lorem Ispsum sit amet, onsectutuer eli, sed diam nonummy</h2>
-      <a href="#">Saiba +</a>
-    </article>    
+    ?>  
 
   </div>
   <div class="clear"></div>
 
-  <div class="todas-noticias"><a href="#" class="azul-borges">Todas as notícias</a></div>
+  <div class="todas-noticias"><a href="<? bloginfo('url') ?>/noticias/" class="azul-borges">Todas as notícias</a></div>
 
 
 </div>

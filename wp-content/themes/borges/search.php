@@ -5,4 +5,4 @@
  * and open the template in the editor.
  */
 ?>
-Aqui ficará o resultado das buscas
+Aqui ficará o resultado das buscas. Em breve.
