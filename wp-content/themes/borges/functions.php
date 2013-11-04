@@ -16,6 +16,7 @@ function remove_thumbnail_dimensions($html) {
   $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
   return $html;
 }
+
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10);
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10);
 
@@ -32,21 +33,23 @@ register_post_type('slide', $args);
 
 
 /* Personaliza o get_the_excerpt */
-function getTheExcerpt( $output ) {
+
+function getTheExcerpt($output) {
   $resumo = str_replace('[&hellip;]', '', $output);
   $resumoPalavras = explode(' ', $resumo);
   $resumoNumPalavras = count($resumoPalavras);
   $excerpt = '';
   $i = 0;
-  while ($i<15 && $i<$resumoNumPalavras){
-    $excerpt .= $resumoPalavras[$i].' ';
+  while ($i < 15 && $i < $resumoNumPalavras) {
+    $excerpt .= $resumoPalavras[$i] . ' ';
     $i++;
   }
   $excerpt .= '...';
-  
+
   return $excerpt;
 }
-add_filter( 'get_the_excerpt', 'getTheExcerpt' );
+
+add_filter('get_the_excerpt', 'getTheExcerpt');
 
 //********************************************************
 // Personalizações para o usuário Editor (e qualquer outro que não tenha privilégios de acessar as opções do blog)
@@ -66,14 +69,16 @@ if (!current_user_can('manage_options')) {
 
     // Retira o logo do WP do topo
     $wp_admin_bar->remove_menu('wp-logo');
-    
-     $wp_admin_bar->remove_menu('updates'); 
-    
+
+    $wp_admin_bar->remove_menu('updates');
   }
+
   add_action('wp_before_admin_bar_render', 'customizeTopMenu');
 
 // Personalização do menu lateral no wp-admin para o Editor 
   function customizeAdminLeftMenu() {
+
+
 
     remove_menu_page('index.php');                // Retira Painel
     remove_menu_page('edit.php');                 // Retira Posts
@@ -83,24 +88,29 @@ if (!current_user_can('manage_options')) {
     remove_menu_page('edit-comments.php');        // Retira Comentários         
     remove_menu_page('tools.php');                // Retira Configurações
 
+
     $primeiroItem = 37;
 
     // Insere os itens personalizados
     add_menu_page('Slides', 'Slides', 'edit_posts', 'edit.php?post_type=slide', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
-    add_menu_page('Quem Somos', 'Quem Somos', 'edit_posts', 'post.php?post='._QUEM_SOMOS.'&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
+    add_menu_page('Quem Somos', 'Quem Somos', 'edit_posts', 'post.php?post=' . _QUEM_SOMOS . '&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Corpo Clínico', 'Corpo Clínico', 'edit_posts', 'edit.php?cat=' . _CORPO_CLINICO, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Exames', 'Exames', 'edit_posts', 'edit.php?cat=' . _EXAMES, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Notícias', 'Notícias', 'edit_posts', 'edit.php?cat=' . _NOTICIAS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
-    add_menu_page('Contato', 'Contato', 'edit_posts', 'post.php?post='._CONTATO.'&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
+    add_menu_page('Contato', 'Contato', 'edit_posts', 'post.php?post=' . _CONTATO . '&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Unidades', 'Unidades', 'edit_posts', 'edit.php?cat=' . _UNIDADES, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
-    
+
     // Insere os itens dos submenus
     add_submenu_page('edit.php?cat=' . _CORPO_CLINICO, 'Listar', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _CORPO_CLINICO);
     add_submenu_page('edit.php?cat=' . _EXAMES, 'Listar', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _EXAMES);
     add_submenu_page('edit.php?cat=' . _NOTICIAS, 'Listar', 'Adicionar Nova', 'edit_posts', 'post-new.php?cat=' . _NOTICIAS);
     add_submenu_page('edit.php?cat=' . _UNIDADES, 'Listar', 'Adicionar Nova', 'edit_posts', 'post-new.php?cat=' . _UNIDADES);
-
   }
+
+  function categoryList($cat) {
+    echo '<script>window.location="edit.php?cat=' . $cat . '"</script>';
+  }
+
   add_action('admin_menu', 'customizeAdminLeftMenu');
 
   // Manipula o que o editor pode ou não fazer
@@ -113,18 +123,18 @@ if (!current_user_can('manage_options')) {
     // Pode visualizar usuários
     $role->add_cap('view_users');
     // Não pode manipular categorias
-    $role->remove_cap('manage_categories');
+    $role->add_cap('manage_categories');
   }
+
   add_action('admin_init', 'manipulaPapeisDeUsuarios');
 
-  
   // Esconde o aviso de atualização do WP
-  function escondeUpdate(){
+  function escondeUpdate() {
     echo '<style type="text/css">.update-nag{ display: none}</style>';
   }
+
   add_action('admin_head', 'escondeUpdate');
-  
-  
+
 // Esconde os filtros por categoria e a possibilidade de se listar todos os posts na tela de listagem de posts,
 // Retira também o nome da categoria (q já é exibida no topo), a coluna de comentários e o botão "edição rápida"
 // (para evitar que se configure categorias)
@@ -142,21 +152,21 @@ if (!current_user_can('manage_options')) {
     </style>
     ';
   }
+
   add_action('admin_head-edit.php', 'escondeFiltros');
   add_action('admin_head-post-new.php', 'escondeFiltros');
 
-  
   // Retira o link de exclusão e edição de slug se for da categoria Conceito
   function escondeDelLink() {
-    echo '<style type="text/css">#wp-admin-bar-view { display: none; }</style>';
-    global $post;   
-    if ($post->ID == _QUEM_SOMOS || $post->ID == _CONTATO) {
-      echo '<style type="text/css">.deletion, #edit-slug-box { display: none; }</style>';
+    //echo '<style type="text/css">#wp-admin-bar-view { display: none; }</style>';
+    global $post;
+    if ($post->ID == _CONTATO) {
+      //echo '<style type="text/css">.deletion, #edit-slug-box { display: none; }</style>';
     }
   }
+
   add_action('admin_head-post.php', 'escondeDelLink');
 
-  
   // Faz algumas alterações visuais via Javascript (mais detalhes abaixo)
   function customInterface() {
 
@@ -216,7 +226,7 @@ if (!current_user_can('manage_options')) {
 
 
     $customUIScript .= '
-        });
+    });
       </script>
     ';
 
@@ -245,4 +255,13 @@ function custom_login_logo() {
 }
 
 add_action('login_head', 'custom_login_logo');
+
+function formataFormularioCategoria() {
+
+  if (isset($_GET['cat'])) {
+    echo '<input type="hidden" class="postform" name="parent" id="parent" value="' . $_GET['cat'] . '" />';
+  }
+}
+
+add_action('category_add_form_fields', 'formataFormularioCategoria');
 ?>

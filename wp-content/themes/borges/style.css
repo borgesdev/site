@@ -57,7 +57,7 @@ a:hover { text-decoration: underline}
 .slideshow { margin: 0px 0px 26px 0px }
 .slideshow img { width: 702px; height: 385px}
 
-.titulo h2 {  line-height: 100%;  border-left: 3px solid #a28f55;display: table-cell;margin: 0;border-bottom: 3px solid #a28f55;border-radius: 8px 0 0px 8px;border-top: 3px solid #a28f55;padding: 8px;font-size: 18px;font-weight: normal;}
+.titulo h2, .titulo h1 {  line-height: 100%;  border-left: 3px solid #a28f55;display: table-cell;margin: 0;border-bottom: 3px solid #a28f55;border-radius: 8px 0 0px 8px;border-top: 3px solid #a28f55;padding: 8px;font-size: 18px;font-weight: normal;}
 
 .titulo { position: relative; margin-bottom: 28px}
 

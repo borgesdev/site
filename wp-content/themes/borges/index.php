@@ -11,7 +11,7 @@ get_template_part('incs/topo');
   <div class='destaques-home float-left'>
     <?
     // Traz as notícias marcadas como destaque 
-    $wp_query = new WP_Query(array('cat' => _NOTICIAS, 'posts_per_page' => 3, 'tag_in' => _TAG_DESTAQUE));
+    $wp_query = new WP_Query(array('cat' => _NOTICIAS, 'posts_per_page' => 3, 'tag__in' => _TAG_DESTAQUE));
     $i = 0;
     while (have_posts()) {
       the_post();
