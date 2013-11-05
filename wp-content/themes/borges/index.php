@@ -27,7 +27,8 @@ get_template_part('incs/topo');
   </div>
 
 
-  <div class="slideshow float-right" id="slideshow">
+  <div class="slideshow float-right position-relative" id="slideshow">
+    <div class="corte-superior-esquerdo"></div>
     <?
     $wp_query = new WP_Query('post_type=slide');
     while (have_posts()) {
@@ -36,6 +37,7 @@ get_template_part('incs/topo');
     }
     ?>
     <img src="<? bloginfo('template_url') ?>/imgs/slide.jpg" />
+    <div class="corte-inferior-direito"></div>
   </div>   
 
   <div class="clear"></div>

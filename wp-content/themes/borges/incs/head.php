@@ -18,7 +18,7 @@ ob_start();
     $title = get_the_title();
   } else {
     $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
-    $description = 'Um local inovador, onde o treinamento físico do aluno é realizado de um modo personalizado diariamente, durante sessões de uma hora, com o auxílio profissional integral. Isso tudo em um ambiente acolhedor, com equipamentos modernos e sem distrações, para elevar ao máximo o aproveitamento do tempo.';
+    $description = '';
     $title = 'Borges de Carvalho';
     
   }
@@ -33,23 +33,13 @@ ob_start();
     <link rel="shortcut icon" href="<?= get_bloginfo('template_url') ?>/favicon.png" />
     <meta name="url" content="http://www.foccustraining.com.br/" />
     <meta name="description" content="<?= $description ?>" />
-    <meta name="keywords" content="foccustraining, foccus, academia, fitness, laranjeiras, zona sul, rio de janeiro" />
+    <meta name="keywords" content="otorrino, otorrinos, otorrinolaringologia, otorrinolaringologista, ouvidos, nariz, garganta, rio de janeiro" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="company" content="Foccus" />
     <meta name="revisit-after" content="1" />
     <title><?=$title?></title>
     <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/style.css" />
-    <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/estilos.css" />
-    <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/login.css" />
-    <!-- Metas para compartilhamento no facebook -->
-    <meta property="fb:admins" content="1199485757,100003731853550"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<? the_permalink() ?>" />
-    <meta property="og:title" content="<?=$title?>" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:image" content="<?= $thumbUrl ?>" />
-    <meta property="og:description" content="<?= $description ?>" />
-
+    <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/style1.css" />
 
     <? wp_head() ?>
   </head>

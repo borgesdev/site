@@ -19,12 +19,14 @@ a:hover { text-decoration: underline}
 .clear { clear: both}
 .no-mg-right { margin-right: 0px !important}
 .site { width: 960px; margin: 12px auto}
+.position-relative { position: relative}
 
 /* Estilos reaproveitados ao longo do site */
 .azul-borges { color: #5e789d}
 .azul-borges-bg { background-color: #5e789d}
 .marrom-borges { color: #a28f55}
 .marrom-borges-bg { background-color: #a28f55}
+.coluna-direita { width: 685px}
 
 /* Estilo de seções específicas */
 .logo-topo a { display: block; color: transparent; background: url('imgs/logo.png') no-repeat; width: 275px; height: 118px}
@@ -70,7 +72,18 @@ a:hover { text-decoration: underline}
 .todas-noticias { width: 132px; background: url('imgs/setas.png') no-repeat center right; margin-top: 30px }
 .todas-noticias a { font-size: 13px; }
 
+/* QUEM SOMOS */
+.corte-superior-esquerdo { border-top: 55px solid #fff; border-right: 55px solid transparent; position: absolute; top: 0px; left: 0px}
+.corte-inferior-direito { border-bottom: 55px solid #fff; border-left: 55px solid transparent; position: absolute; bottom: 0px; right: 0px}
+.quem-somos-img { width: 288px; height: 345px; margin-bottom: 10px}
+.quem-somos-img-leg strong { font-size: 1.1em} 
+.texto-quem-somos { margin: 0px 0px 0px 25px; width: 365px; }
+.texto-quem-somos p { font-size: 1.1em; margin-bottom: 10px }
+.texto-quem-somos a { color: #D54E21 }
+
+/* RODAPE */
 .rodape nav ul { list-style-type: none}
-.rodape nav ul li { display: inline-block; width: 136px; border-right: 1px solid #d5d5d5; height: 42px; margin-top: 60px }
+.rodape nav ul li { display: inline-block; width: 136px; border-right: 1px solid #d5d5d5; height: 42px; margin-top: 60px; }
 .rodape nav ul li a { font-size: 14px}
 .tarja-azul-rodape { height: 124px; width: 100%;  margin-top: 48px}
+
