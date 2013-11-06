@@ -39,12 +39,12 @@ a:hover { text-decoration: underline}
 
 .menu-topo ul { list-style-type: none;} 
 .menu-topo ul li { display: inline-block; width: 105px; height: 32px;text-align: center;padding: 16px 0px 0px 0px; position: relative}
-.menu-topo ul li:hover { cursor: pointer}
+.menu-topo ul li:hover { background: #7a8ca4;  cursor: pointer}
 
 .menu-topo ul li a { color: #ddd; }
 .menu-topo ul li a:hover { color: #fff; text-decoration: none }
 
-.corte {border-bottom: 14px #5e789d solid; display: inline-block; float: left; border-left: 14px #fff solid; position: absolute; top: 0px; left: 0px;}
+.corte {border-bottom: 14px transparent solid; display: inline-block; float: left; border-left: 14px #fff solid; position: absolute; top: 0px; left: 0px;}
 
 .busca-topo { margin: 14px 0px 0px 0px; width: 204px}
 .busca-topo input[type=text] { width: 168px; height: 26px; border: 1px solid #a28f55; display: block; float: left}
