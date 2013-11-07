@@ -29,3 +29,19 @@
 </div>
 <!-- Fecha a div com a classe="site" aberta em topo.php -->
 <div class="tarja-azul-rodape azul-borges-bg"></div>
+
+<script type="text/javascript" src="<? bloginfo('template_url') ?>/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="<? bloginfo('template_url') ?>/js/cycle.js"></script>
+
+<script type="text/javascript">
+
+  if ($('#slideshow').length > 0) {
+    $('#slideshow').cycle({
+      fx: 'fade',
+      speed: 300,
+      timeout: 5000
+    });
+
+  }
+
+</script>

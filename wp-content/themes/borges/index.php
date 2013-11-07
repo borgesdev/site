@@ -1,6 +1,6 @@
 <?
 if (!is_user_logged_in())
-  die(header('Location: '.  get_bloginfo('url').'/embreve.php')); 
+  die(header('Location: ' . get_bloginfo('url') . '/embreve.php'));
 get_template_part('incs/head');
 get_template_part('incs/topo');
 ?>
@@ -27,16 +27,17 @@ get_template_part('incs/topo');
   </div>
 
 
-  <div class="slideshow float-right position-relative" id="slideshow">
+  <div class="slideshow float-right position-relative">
     <div class="corte-superior-esquerdo"></div>
-    <?
-    $wp_query = new WP_Query('post_type=slide');
-    while (have_posts()) {
-      the_post();
-      the_post_thumbnail();
-    }
-    ?>
-    <img src="<? bloginfo('template_url') ?>/imgs/slide.jpg" />
+    <div id="slideshow">
+      <?
+      $wp_query = new WP_Query('post_type=slide');
+      while (have_posts()) {
+        the_post();
+        the_post_thumbnail();
+      }
+      ?>
+    </div>
     <div class="corte-inferior-direito"></div>
   </div>   
 

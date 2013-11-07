@@ -78,8 +78,8 @@ ul { list-style-type: none;}
 .todas-noticias a { font-size: 13px; }
 
 /* QUEM SOMOS */
-.corte-superior-esquerdo { border-top: 55px solid #fff; border-right: 55px solid transparent; position: absolute; top: 0px; left: 0px}
-.corte-inferior-direito { border-bottom: 55px solid #fff; border-left: 55px solid transparent; position: absolute; bottom: 0px; right: 0px}
+.corte-superior-esquerdo { border-top: 55px solid #fff; border-right: 55px solid transparent; position: absolute; top: 0px; left: 0px; z-index: 1000}
+.corte-inferior-direito { border-bottom: 55px solid #fff; border-left: 55px solid transparent; position: absolute; bottom: 0px; right: 0px; z-index: 1000}
 .quem-somos-img { width: 288px; height: 345px; margin-bottom: 10px}
 .quem-somos-img-leg strong { font-size: 1.1em; font-weight: bold} 
 .texto-quem-somos { margin: 0px 0px 0px 25px; width: 365px; }
