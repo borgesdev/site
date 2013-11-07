@@ -244,6 +244,7 @@ if (!current_user_can('manage_options')) {
     $screen->remove_help_tabs();
   }
 
+  // Remove as opções de Visualização
   add_filter('screen_options_show_screen', '__return_false');
 }
 

@@ -13,4 +13,7 @@ define('_CONTATO', 8);
 // Tags
 define ('_TAG_DESTAQUE', 8);
 
+// Conteúdos constantes
+define ('_CORPO_CLINICO_TEXTO', 17);
+
 ?>

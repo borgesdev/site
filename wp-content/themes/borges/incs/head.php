@@ -35,7 +35,7 @@ ob_start();
     <meta name="description" content="<?= $description ?>" />
     <meta name="keywords" content="otorrino, otorrinos, otorrinolaringologia, otorrinolaringologista, ouvidos, nariz, garganta, rio de janeiro" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="company" content="Foccus" />
+    <meta name="company" content="Borges de Carvalho" />
     <meta name="revisit-after" content="1" />
     <title><?=$title?></title>
     <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/style.css" />

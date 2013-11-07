@@ -27,7 +27,7 @@
             // Retira a palavra "category" da URL (melhor para SEO)
             $url = str_replace('category/', '', $menuItem->url);
             ?>
-            <li class="azul-borges-bg"><div class="corte"></div><a href="<?= $menuItem->url ?>"><?= $menuItem->title ?></a></li>
+            <li class="azul-borges-bg"><div class="corte"></div><a href="<?= $url ?>"><?= $menuItem->title ?></a></li>
             <?php
           }
           ?>          

@@ -10,8 +10,9 @@
 
 /* Estilos de elementos */
 * { padding: 0; margin: 0; font-family: verdana;  color: #777; font-size: 11px; font-weight: normal }
-a { text-decoration: none; color: #D54E21 }
+a { text-decoration: none; color: #D54E21; font-size: inherit }
 a:hover { text-decoration: underline}
+p { font-size: 1.2em; margin-bottom: 10px}
 
 /* Estilos de uso geral */
 .float-right { float: right }
@@ -27,6 +28,8 @@ a:hover { text-decoration: underline}
 .marrom-borges { color: #a28f55}
 .marrom-borges-bg { background-color: #a28f55}
 .coluna-direita { width: 685px}
+.coluna-direita h2 { font-size: 1.4em; font-weight: bold; margin-bottom: 10px}
+.coluna-direita h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px}
 
 /* Estilo de seções específicas */
 .logo-topo a { display: block; color: transparent; background: url('imgs/logo.png') no-repeat; width: 275px; height: 118px}
@@ -78,8 +81,11 @@ a:hover { text-decoration: underline}
 .quem-somos-img { width: 288px; height: 345px; margin-bottom: 10px}
 .quem-somos-img-leg strong { font-size: 1.1em; font-weight: bold} 
 .texto-quem-somos { margin: 0px 0px 0px 25px; width: 365px; }
-.texto-quem-somos p { font-size: 1.2em; margin-bottom: 10px }
-.texto-quem-somos a:last-of-type { font-size: 1.2em; color: #D54E21;  }
+.texto-quem-somos a:last-of-type { color: #D54E21;  }
+
+/* CORPO CLÍNICO */
+.corpo-clinico { margin: 30px 0px 0px 20px}
+.corpo-clinico article { margin-bottom: 30px}
 
 
 /* SIDEBAR */
