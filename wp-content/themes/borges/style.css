@@ -13,6 +13,7 @@
 a { text-decoration: none; color: #D54E21; font-size: inherit }
 a:hover { text-decoration: underline}
 p { font-size: 1.2em; margin-bottom: 10px}
+ul { list-style-type: none;} 
 
 /* Estilos de uso geral */
 .float-right { float: right }
@@ -40,10 +41,9 @@ p { font-size: 1.2em; margin-bottom: 10px}
 .social .twitter { background-position: 0px 0px;}
 .social .facebook { background-position: 32px 0px; }
 
-.menu-topo ul { list-style-type: none;} 
+
 .menu-topo ul li { display: inline-block; width: 105px; height: 32px;text-align: center;padding: 16px 0px 0px 0px; position: relative}
 .menu-topo ul li:hover { background: #7a8ca4;  cursor: pointer}
-
 .menu-topo ul li a { color: #ddd; display: inline-block; height: 100%; width: 100%}
 .menu-topo ul li a:hover { /*color: #fff;*/ text-decoration: none }
 
@@ -91,6 +91,14 @@ p { font-size: 1.2em; margin-bottom: 10px}
 
 /* NOTICIAS */
 .noticias article { margin-right: 35px}
+
+/* EXAMES */
+.exames aside { width: 165px; margin-right: 38px;}
+.exames aside ul li { font-size: 1.3em; margin-bottom: 15px;}
+.exames article { width: 474px; border: 0px; padding: 0; margin: 0}
+.exames article h1 { font-size: 1.5em; margin-bottom: 15px}
+.tarja-img { width: 88.4%; height: 15px; margin-bottom: 30px;}
+
 
 /* SIDEBAR */
 aside.sidebar { width: 232px; background: url('imgs/sidebar-title-bg.png') repeat-x top center}
