@@ -1,6 +1,4 @@
 <?php
-/* Template Name: Quem Somos */
-
 get_template_part('incs/head');
 get_template_part('incs/topo');
 ?>
