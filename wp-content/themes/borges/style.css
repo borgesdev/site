@@ -69,7 +69,8 @@ p { font-size: 1.2em; margin-bottom: 10px}
 .linha-titulo { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 8px; width: 952px }
 
 .linha-boxes { }
-.linha-boxes article { border-top: 3px #5e789d solid; padding-top: 8px; width: 180px; margin-right: 15px; margin-bottom: 30px}
+.linha-boxes article { border-top: 3px #5e789d solid; padding-top: 8px; width: 185px; margin-right: 8px; margin-bottom: 30px}
+.linha-boxes article img { width: 100%; height: auto;}
 .linha-boxes article h2 { margin: 10px 10px 10px 0px; font-weight: normal}
 .linha-boxes article a { color: #D54E21;}
 
@@ -88,6 +89,8 @@ p { font-size: 1.2em; margin-bottom: 10px}
 .corpo-clinico { margin: 30px 0px 0px 20px}
 .corpo-clinico article { margin-bottom: 30px}
 
+/* NOTICIAS */
+.noticias article { margin-right: 35px}
 
 /* SIDEBAR */
 aside.sidebar { width: 232px; background: url('imgs/sidebar-title-bg.png') repeat-x top center}

@@ -10,7 +10,7 @@ get_template_part('incs/topo');
     <h1 class="azul-borges">Notícias</h1>
   </div>
 
-  <section class="float-left coluna-direita linha-boxes">
+  <section class="float-left coluna-direita linha-boxes noticias">
     <?
     $wp_query = new WP_Query(array('cat' => _NOTICIAS));
     $i = 1;
