@@ -10,3 +10,105 @@ root {
   display: block;
 }
 
+#main {
+  width: 82%;
+  height: 44px;
+  z-index:2;
+  float:left;
+  border: 1px solid #0191b4;
+}
+
+
+
+#submit{
+  width:89px; 
+  height:38px;
+  background: #5e789d;
+  color:white;
+  border: none;
+  padding:2px;
+  float:right;
+}
+
+#submit:hover{background: #7a8ca4;}
+
+.topo-contato { height: 0px; width: 100%; background: url('imgs/img_contato.jpg') no-repeat top right; }
+.contato-bloco { width: 100%; margin: 0px auto }
+.contato-esquerda { width: 35% }
+.contato-direita { width: 34% }
+.mapa { width: 100%; height: 270px;}
+.contato-direita form input, select, textarea { border: 1px solid #5e789d; color: #5e789d; font-size: 16px; font-family: verdana;  width: 92.6%; padding: 3.4%; margin-bottom: 20px;}
+.contato-direita form input, select {height: 17px; }
+
+.ddd { width: 11.3% !important; margin-right: 0.46%}
+.telefone { width:  72.2% !important}
+.contato-endereco{margin-bottom:45px; float:left; width:28%; margin-left: 13px;  }
+.contato-horarios{margin-bottom:45px}
+.grupo1{margin-bottom: 18px; }
+
+
+
+<!--
+/* Contato mobile */
+@media screen and (max-width: 749px) {
+  .contato-esquerda, .contato-direita { width: 90%; float: none; margin: 40px auto; }
+  .mapa { width: 90%}
+  /*.topo-contato { display: none}*/
+  .form-contato { width: 100%; margin-top:45px; display: block;}
+  .contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 93.2%; padding: 3.4%; margin-bottom: 20px;}
+  .contato-direita form input, select {height: 17px; }
+  .ddd { width: 16.33% !important; margin-right: 0.46%}
+  .telefone { width: 66.66% !important;}
+}
+-->
+
+.styled-select select {
+  background: transparent;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 2;
+  border: 0;
+  border-radius: 0;
+  height:46px;
+  -webkit-appearance: none;
+  text-indent: 3pt;
+}
+
+
+.styled-select {
+  width: 90,98%;
+  height: 46px;
+  overflow: hidden;
+  background: url('imgs/bnt_select.jpg') no-repeat right #ffffff;
+  border: 1px solid #5e789d;
+  margin-bottom: 20px;
+}
+
+.styled-select:hover {
+  background: url('imgs/bnt_select_bg.jpg') no-repeat right #ffffff;
+}
+
+
+.titulo2 { position: relative; margin-bottom: 28px; float: left}
+
+.linha-titulo-contato { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 424px; width: 535px }
+
+.dados{
+  font-size: 16px;
+  color:#5e789d;
+}
+
+.dados2{
+  font-size: 16px;
+  color:#5e789d;
+  margin-top: 18px;
+}
+
+.dados3{
+  font-size: 16px;
+  color:#5e789d;
+  margin-top: 8px;
+}
+
+
