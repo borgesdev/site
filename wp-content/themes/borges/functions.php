@@ -265,8 +265,4 @@ function formataFormularioCategoria() {
 }
 
 add_action('category_add_form_fields', 'formataFormularioCategoria');
-
- /* fix-again */
-
 ?>
-
