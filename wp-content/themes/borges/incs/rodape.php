@@ -43,5 +43,32 @@
     });
 
   }
+</script>
 
+<?
+global $ehNoticia;
+// Se estiver numa página interna de notícias, verifica a existência de imagens com alt=destaque e adiciona o estilo próprio
+if (isset($ehNoticia)) {
+  ?>
+  <script type="text/javascript">
+
+    $('.coluna-direita article img[alt="destaque"]').each(function() {
+      var imgLargura = $(this).width();
+      $(this).wrap('<div class="position-relative" ></div>');
+      $(this).parent().wrap('<div style="width:' + imgLargura + 'px"></div>');
+      $(this).before('<div class="corte-superior-esquerdo"></div>');
+      $(this).after('<div class="corte-inferior-direito"></div>');
+      $(this).parent().after('<div class="tarja-img azul-borges-bg"></div>');
+   });
+
+  </script>
+  <?
+}
+?>
+<script type="text/javascript">
+  // Faz a tarja das imagens ser sempre a largura delas - 55px
+    $('.tarja-img').each(function() {
+      var larguraPai = $(this).parent().width();
+      $(this).width(larguraPai - 55);
+    });
 </script>

@@ -97,8 +97,7 @@ ul { list-style-type: none;}
 .exames aside ul li { font-size: 1.3em; margin-bottom: 15px;}
 .exames article { width: 474px; border: 0px; padding: 0; margin: 0}
 .exames article h1 { font-size: 1.5em; margin-bottom: 15px}
-.tarja-img { width: 88.4%; height: 15px; margin-bottom: 30px;}
-
+.tarja-img { height: 15px; margin-bottom: 30px;}
 
 /* SIDEBAR */
 aside.sidebar { width: 232px; background: url('imgs/sidebar-title-bg.png') repeat-x top center}
