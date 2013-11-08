@@ -35,8 +35,9 @@ $exame = $post;
       <div class="position-relative">
         <?= get_the_post_thumbnail($exame->ID) ?>
         <div class="corte-inferior-direito"></div>
+        <div class="tarja-img azul-borges-bg"></div>      
       </div>
-      <div class="tarja-img azul-borges-bg"></div>      
+      
       <?=$exame->post_content ?>
     </article>
 
