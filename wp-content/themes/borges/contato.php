@@ -13,10 +13,11 @@ the_post();
   <div class="contato-bloco">
 
     <div class="float-left contato-esquerda">
-         
+        
       <div>         
         <p class="mapa-linha" width="93%" heigh="0px"></p>
       </div>
+      
       <div class="mapa">         
         <iframe width="100%" height="98%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+das+Laranjeiras,+260,+Rio+de+Janeiro&amp;aq=&amp;sll=-22.934296,-43.18732&amp;sspn=0.008418,0.013926&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=R.+das+Laranjeiras,+260+-+Laranjeiras,+Rio+de+Janeiro,+22240-003&amp;ll=-22.934296,-43.18732&amp;spn=0.008418,0.013926&amp;z=14&amp;output=embed"></iframe>
       </div>
