@@ -46,30 +46,30 @@ root {
 }
 
 
-.mapa { width: 93%; height: 270px; margin-bottom:20px;}
+.mapa { width: 312px; height: 270px;}
 .contato-direita form input, select, textarea { border: 1px solid #5e789d; color: #5e789d; font-size: 16px; font-family: verdana;  width: 92.6%; padding: 3.4%; margin-bottom: 20px;}
 .contato-direita form input, select {height: 17px; }
 .ddd { width: 11.3% !important; margin-right: 0.46%}
 .telefone { width:  72.2% !important}
 .contato-endereco{margin-bottom:45px; float:left; width:28%; margin-left: 13px;  }
-.contato-horarios{margin-bottom:45px}
+.contato-horarios{margin-top: 20px; margin-bottom:45px}
 .grupo1{margin-bottom: 18px; }
 
 
 
-<!--
 /* Contato mobile */
+/*
 @media screen and (max-width: 749px) {
   .contato-esquerda, .contato-direita { width: 90%; float: none; margin: 40px auto; }
   .mapa { width: 90%}
-  /*.topo-contato { display: none}*/
+  /*.topo-contato { display: none}
   .form-contato { width: 100%; margin-top:45px; display: block;}
   .contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 93.2%; padding: 3.4%; margin-bottom: 20px;}
   .contato-direita form input, select {height: 17px; }
   .ddd { width: 16.33% !important; margin-right: 0.46%}
   .telefone { width: 66.66% !important;}
 }
--->
+*/
 
 .styled-select select {
   background: transparent;
@@ -111,7 +111,8 @@ root {
 .dados2{
   font-size: 16px;
   color:#5e789d;
-  margin-top: 18px;
+  margin-top: 27px;
+  margin-bottom: 14px;
 }
 
 .dados3{
