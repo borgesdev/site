@@ -10,6 +10,10 @@ switch($categoria[0]){
         $pagina = 'exame.php';
         break;    
       
+    case _CORPO_CLINICO:
+        $pagina = 'equipe.php';
+        break;          
+      
     default:
         $pagina = '404.php';
         break;

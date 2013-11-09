@@ -245,7 +245,7 @@ if (!current_user_can('manage_options')) {
   }
 
   // Remove as opções de Visualização
-  add_filter('screen_options_show_screen', '__return_false');
+  //add_filter('screen_options_show_screen', '__return_false');
 }
 
 //Altera o logo do login 

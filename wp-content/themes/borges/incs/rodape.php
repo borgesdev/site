@@ -21,14 +21,36 @@
       ?>         
     </ul>
 
-  </nav>
+  </nav>  
 
 </footer>
 
 
 </div>
 <!-- Fecha a div com a classe="site" aberta em topo.php -->
-<div class="tarja-azul-rodape azul-borges-bg"></div>
+<div class="tarja-azul-rodape azul-borges-bg">
+
+  <div class="site">
+    <?
+    global $wp_query;
+    $wp_query = new WP_Query(array('cat' => _UNIDADES));
+    //var_dump($wp_query->posts);
+    while (have_posts()) {
+      the_post();
+      ?>
+      <section>
+        <strong><? the_title() ?>:</strong> <?= strip_tags(get_the_content()) ?><br />Telefone: <?= str_replace('...', '', get_the_excerpt()) ?>
+      </section>
+      <?
+    }
+    ?>  
+    <div class="float-right creditos">
+      Desenvolvido por: <a href="mailto:magnofd@yahoo.com.br">Magno Dal Magro</a> e <a href="mailto:joaogabrielv@gmail.com">João Gabriel</a>
+    </div>
+    
+  </div>
+
+</div>
 
 <script type="text/javascript" src="<? bloginfo('template_url') ?>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<? bloginfo('template_url') ?>/js/cycle.js"></script>

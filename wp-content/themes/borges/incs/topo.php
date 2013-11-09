@@ -35,7 +35,7 @@
       </nav>
     </div>
     <div class="busca-topo float-right">
-      <form action="">
+      <form action="<?bloginfo('url')?>">
         <input type="submit" value=""/>
         <input type="text" name="s" />
       </form>
