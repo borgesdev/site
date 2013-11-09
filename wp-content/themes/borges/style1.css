@@ -36,16 +36,10 @@ root {
 .contato-bloco { width: 100%; margin: 0px auto }
 .contato-esquerda { width: 35% }
 .contato-direita { width: 34% }
-.mapa-linha { width: 23.2%; height: 1px; line-height: 100%; border-top: 19px solid #5e789d;  border-right:19px solid white;  z-index: 3000; margin-top:0px; position: absolute }
-.giro{ 
-
--webkit-transform: rotate(75deg) scale(1.25, 0.5);
-    -moz-transform: rotate(75deg) scale(1.25, 0.5);
-    -ms-transform: rotate(75deg) scale(1.25, 0.5);
-    transform: rotate(75deg) scale(1.25, 0.5);
-}
+.mapa-linha { width: 94%; height: 1px; line-height: 100%; border-top: 19px solid #5e789d;  border-right:19px solid white;  z-index: 3000; margin-top:0px;  }
 
 
+  
 .mapa { width: 93%; height: 270px; margin-bottom:40px;}
 .contato-direita form input, select, textarea { border: 1px solid #5e789d; color: #5e789d; font-size: 16px; font-family: verdana;  width: 92.6%; padding: 3.4%; margin-bottom: 20px;}
 .contato-direita form input, select {height: 17px; }
