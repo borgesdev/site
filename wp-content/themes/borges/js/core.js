@@ -116,3 +116,5 @@ $('.menu-mobile-icon > a').click(function() {
         $('.menu-mobile').slideUp('slow');
 });
 
+
+/* chato pra caralho */
