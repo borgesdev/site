@@ -30,29 +30,43 @@ the_post();
         <p class="dados">Horário de funcionamento</p>
         <? the_content() ?>
       </div>
-    
+
     </div>
-    
-  <div class='titulo'>
-    <span class="linha-titulo-contato"> </span>
-    <h1 class="azul-borges">Contato</h1>
-  </div>
-    
+
+    <div class='titulo'>
+      <span class="linha-titulo-contato"></span>
+      <h1 class="azul-borges">Contato</h1>
+    </div>
+
     <div class="contato-endereco">
       <p class="dados">Email</p>
-        <? the_content() ?>
+      <? $camposExtras = get_post_custom();
+      echo $camposExtras['Email'][0];
+      ?> 
       <p class="dados2">Unidades</p>
-        <? the_content() ?>
-      <p class="dados-3"><? the_content() ?></p>
-      <p><a href="#"><< Localizar no mapa</a>
-        <? the_content() ?>
-      <p class="dados-3"><? the_content() ?></p>
-        <? the_content() ?>
-      <p><a href="#"><< Localizar no mapa</a>
+
+      <?
+      global $wp_query;
+      $wp_query = new WP_Query(array('cat' => _UNIDADES));
+      //var_dump($wp_query->posts);
+      while (have_posts()) {
+        the_post();
+        ?>
+        <h3 class="marrom-borges"><? the_title() ?></h3>
+        <p class="dados-3"><? the_content() ?></p>
+        <h4 class="azul-borges">Telefones</h4>
+        <div class="telefones">
+          <?= str_replace('...', '', get_the_excerpt()) ?>
+        </div>
+        <p><a href="#"><< Localizar no mapa</a>
+          <?
+        }
+        ?>       
+
     </div>
-    
+
     <div class="float-right contato-direita"> 
-      
+
       <form action="" method="post"  enctype="multipart/form-data" id="form-contato">
         <div>
           <div class="styled-select">
@@ -62,7 +76,6 @@ the_post();
               <option value="Elogios">Elogios</option>
               <option value="Críticas">Críticas</option>
               <option value="Depoimentos">Depoimentos</option>
-              <option value="Envio de Currículo">Envio de Currículo</option>
             </select>
           </div>
         </div>
@@ -73,25 +86,35 @@ the_post();
         </div>      
 
         <div>      
-          <input type="text" name="nome" id="nome" value="Nome*" onfocus="if(this.value==='Nome*')this.value='';" onblur="if (this.value==='')this.value='NOME*';"/>
+          <input type="text" name="nome" id="nome" value="Nome*" onfocus="if (this.value === 'Nome*')
+                this.value = '';" onblur="if (this.value === '')
+                this.value = 'NOME*';"/>
         </div>
 
         <div>
-          <input type="text" name="Email" id="email" value="Email*" onfocus="if(this.value==='email*')this.value='';" onblur="if (this.value==='')this.value='E-MAIL*';"/>
+          <input type="text" name="Email" id="email" value="Email*" onfocus="if (this.value === 'email*')
+                this.value = '';" onblur="if (this.value === '')
+                this.value = 'E-MAIL*';"/>
         </div>
         <div>
-          <input type="text" class="ddd" name="ddd" id="ddd" value="ddd*" onfocus="if(this.value==='ddd*')this.value='';" onblur="if (this.value==='')this.value='DDD*';"/>
-          <input type="text" class="telefone "name="telefone" id="telefone" value="Telefone*" onfocus="if(this.value==='Telefone*')this.value='';" onblur="if (this.value==='')this.value='TELEFONE*';"/>
+          <input type="text" class="ddd" name="ddd" id="ddd" value="ddd*" onfocus="if (this.value === 'ddd*')
+                this.value = '';" onblur="if (this.value === '')
+                this.value = 'DDD*';"/>
+          <input type="text" class="telefone "name="telefone" id="telefone" value="Telefone*" onfocus="if (this.value === 'Telefone*')
+                this.value = '';" onblur="if (this.value === '')
+                this.value = 'TELEFONE*';"/>
         </div>
         <div>
-          <textarea name="mensagem" id="mensagem" class="mensagem" onfocus="if(this.value==='Mensagem')this.value='';" onblur="if (this.value==='')this.value='Mensagem';">Mensagem</textarea>
+          <textarea name="mensagem" id="mensagem" class="mensagem" onfocus="if (this.value === 'Mensagem')
+                this.value = '';" onblur="if (this.value === '')
+                this.value = 'Mensagem';">Mensagem</textarea>
         </div>
         <div>
           <input type="submit" value="Enviar" id="submit"/>
         </div>
       </form>
     </div>
-    
+
     <div class="clear"></div>
   </div>
 </div>
