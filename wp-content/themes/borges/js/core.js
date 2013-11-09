@@ -10,7 +10,8 @@ $(document).ready(function() {
   }
 
   // Verifica se existe uma imagem marcada com o atributo alt="destaque"
-  $('.coluna-direita article img[alt="destaque"]').each(function() {
+  $('.noticias article img[alt="destaque"]').each(function() {
+    console.log('Encontrou imagem marcada com o atributo alt="destaque"')
     // Se exitir, coloca o estilo correspondente
     var imgLargura = $(this).width();
     $(this).wrap('<div class="position-relative" ></div>');
