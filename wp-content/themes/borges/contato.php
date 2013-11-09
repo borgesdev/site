@@ -13,19 +13,12 @@ the_post();
   <div class="contato-bloco">
 
     <div class="float-left contato-esquerda">
-        
-      
-      
+
       <div class="mapa">         
-        <iframe width="100%" height="98%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+das+Laranjeiras,+260,+Rio+de+Janeiro&amp;aq=&amp;sll=-22.934296,-43.18732&amp;sspn=0.008418,0.013926&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=R.+das+Laranjeiras,+260+-+Laranjeiras,+Rio+de+Janeiro,+22240-003&amp;ll=-22.934296,-43.18732&amp;spn=0.008418,0.013926&amp;z=14&amp;output=embed"></iframe>
-     
-             
+       <iframe width="312" height="265"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Debret,+23+%2F+Centro,+Rio+de+Janeiro+%E2%80%93+RJ&amp;aq=&amp;sll=-22.968477,-43.185517&amp;sspn=0.008861,0.013937&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Debret,+23+-+Centro,+Rio+de+Janeiro,+20030-080&amp;t=m&amp;z=14&amp;ll=-22.907369,-43.174218&amp;output=embed"></iframe>
         <p class="mapa-linha"></p>
-     
-      
       </div>
-      
-      
+
       <div class="contato-horarios">
         <p class="dados">Horário de funcionamento</p>
         <? the_content() ?>
@@ -40,7 +33,8 @@ the_post();
 
     <div class="contato-endereco">
       <p class="dados">Email</p>
-      <? $camposExtras = get_post_custom();
+      <?
+      $camposExtras = get_post_custom();
       echo $camposExtras['Email'][0];
       ?> 
       <p class="dados2">Unidades</p>
@@ -51,6 +45,7 @@ the_post();
       //var_dump($wp_query->posts);
       while (have_posts()) {
         the_post();
+        $camposExtras = get_post_custom();
         ?>
         <h3 class="marrom-borges"><? the_title() ?></h3>
         <p class="dados-3"><? the_content() ?></p>
@@ -58,10 +53,11 @@ the_post();
         <div class="telefones">
           <?= str_replace('...', '', get_the_excerpt()) ?>
         </div>
-        <p><a href="#"><< Localizar no mapa</a>
-          <?
-        }
-        ?>       
+        <p><a href="#" class="localizar-no-mapa" id="<? the_ID() ?>"><< Localizar no mapa</a></p>
+        <input type="hidden" id="mapa-<? the_ID() ?>" value="<?= urlencode($camposExtras['localizacao_gmaps'][0]); ?>" />
+        <?
+      }
+      ?>       
 
     </div>
 
@@ -78,36 +74,21 @@ the_post();
               <option value="Depoimentos">Depoimentos</option>
             </select>
           </div>
-        </div>
-
-        <div id="arquivoUpload" style="display: none">
-          <label for="arquivo">Arquivo: (PDF ou DOC)</label>
-          <input type="file" name="arquivo" id="arquivo" />
-        </div>      
+        </div> 
 
         <div>      
-          <input type="text" name="nome" id="nome" value="Nome*" onfocus="if (this.value === 'Nome*')
-                this.value = '';" onblur="if (this.value === '')
-                this.value = 'NOME*';"/>
+          <input type="text" name="nome" id="nome" placeholder="Nome*"/>
         </div>
 
         <div>
-          <input type="text" name="Email" id="email" value="Email*" onfocus="if (this.value === 'email*')
-                this.value = '';" onblur="if (this.value === '')
-                this.value = 'E-MAIL*';"/>
+          <input type="text" name="Email" id="email" placeholder="Email*" />
         </div>
         <div>
-          <input type="text" class="ddd" name="ddd" id="ddd" value="ddd*" onfocus="if (this.value === 'ddd*')
-                this.value = '';" onblur="if (this.value === '')
-                this.value = 'DDD*';"/>
-          <input type="text" class="telefone "name="telefone" id="telefone" value="Telefone*" onfocus="if (this.value === 'Telefone*')
-                this.value = '';" onblur="if (this.value === '')
-                this.value = 'TELEFONE*';"/>
+          <input type="text" class="ddd" name="ddd" id="ddd" placeholder="DDD*" />
+          <input type="text" class="telefone "name="telefone" id="telefone" placeholder="Telefone"/>
         </div>
         <div>
-          <textarea name="mensagem" id="mensagem" class="mensagem" onfocus="if (this.value === 'Mensagem')
-                this.value = '';" onblur="if (this.value === '')
-                this.value = 'Mensagem';">Mensagem</textarea>
+          <textarea name="mensagem" id="mensagem" class="mensagem" placeholder="Mensagem"></textarea>
         </div>
         <div>
           <input type="submit" value="Enviar" id="submit"/>

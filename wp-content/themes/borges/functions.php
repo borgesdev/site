@@ -145,7 +145,7 @@ if (!current_user_can('manage_options')) {
       .tablenav.top .alignleft.actions select#cat,
       .tablenav.top .alignleft.actions input#post-query-submit,
       .tablenav.top .view-switch, .column-categories, .column-comments, 
-      .subsubsub, .inline, 
+      .subsubsub, .inline, #categorydiv,
       #message p a{ 
           display: none; 
       }
@@ -245,7 +245,7 @@ if (!current_user_can('manage_options')) {
   }
 
   // Remove as opções de Visualização
-  //add_filter('screen_options_show_screen', '__return_false');
+  add_filter('screen_options_show_screen', '__return_false');
 }
 
 //Altera o logo do login 

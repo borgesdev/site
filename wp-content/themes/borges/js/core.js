@@ -26,4 +26,15 @@ $(document).ready(function() {
     var larguraPai = $(this).parent().width();
     $(this).width(larguraPai - 55);
   });
+
+});
+
+/* EVENTOS */
+
+// Altera o mapa exibido em contato pelo selecionado 
+$('.localizar-no-mapa').click(function(){
+  //alert(decodeURIComponent($('#mapa-'+$(this).attr('id')).val()));
+  var mapa = decodeURIComponent($('#mapa-'+$(this).attr('id')).val());
+  $('.mapa').html(mapa.replace(/\+/g, ' ')+'<p class="mapa-linha"></p>');
+  return false;
 });
