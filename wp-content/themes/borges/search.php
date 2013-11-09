@@ -2,8 +2,6 @@
 get_template_part('incs/head');
 get_template_part('incs/topo');
 
-var_dump($_GET);
-
 ?>
 
 <div class="conteudo">

@@ -7,20 +7,12 @@ ob_start();
 
   <?
   // Verifica se está sendo visualizado um post para alterar as meta tags de compartilhamento.
-  if (is_single() && !is_home()) {
-    if (has_post_thumbnail($post->ID)) {
-      $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
-      $thumbUrl = $thumb['0'];
-    } else {
-      $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
-    }
+  if (is_single() || is_page()) {
     $description = get_the_excerpt($post->ID);
-    $title = get_the_title();
+    $title = get_the_title() . ' | Borges de Carvalho';
   } else {
-    $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
     $description = '';
     $title = 'Borges de Carvalho';
-    
   }
   ?>  
 
@@ -29,17 +21,19 @@ ob_start();
     <meta content="width=device-width, height=420, user-scalable=no" name="viewport"/>
 
     <base href="<?= get_bloginfo('url') ?>/" />
-    <meta name="title" content="<? the_title() ?> | Borges" />
+    <meta name="title" content="<?= $title ?>" />
     <link rel="shortcut icon" href="<?= get_bloginfo('template_url') ?>/favicon.png" />
-    <meta name="url" content="http://www.foccustraining.com.br/" />
+    <meta name="url" content="<? bloginfo('url') ?>" />
     <meta name="description" content="<?= $description ?>" />
     <meta name="keywords" content="otorrino, otorrinos, otorrinolaringologia, otorrinolaringologista, ouvidos, nariz, garganta, rio de janeiro" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="company" content="Borges de Carvalho" />
     <meta name="revisit-after" content="1" />
-    <title><?=$title?></title>
+    <title><?= $title ?></title>
     <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/style.css" />
     <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/style1.css" />
+    <!--[if IE]><link rel="shortcut icon" href="<?= get_bloginfo('template_url') ?>/imgs/favicon.png"><![endif]-->
+    <link rel="icon" href="<?= get_bloginfo('template_url') ?>/imgs/favicon.png" />
 
     <? wp_head() ?>
   </head>
