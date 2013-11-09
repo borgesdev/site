@@ -6,3 +6,6 @@
  */
 ?>
 Aqui ficará o resultado das buscas. Em breve.
+
+
+/* chato pra caralho */

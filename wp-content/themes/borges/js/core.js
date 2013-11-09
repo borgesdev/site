@@ -117,4 +117,3 @@ $('.menu-mobile-icon > a').click(function() {
 });
 
 
-/* chato pra caralho */
