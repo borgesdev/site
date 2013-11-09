@@ -1,119 +1,28 @@
-/* resolvendo conflito*/
-/* resolvendo conflito2*/
-$('#assunto').change(function() {
+$(document).ready(function() {
 
-    if ($(this).val() == 'Envio de Currículo')
-        $('#arquivoUpload').show('slow');
-    else
-        $('#arquivoUpload').hide();
+  if ($('#slideshow').length > 0) {
+    $('#slideshow').cycle({
+      fx: 'fade',
+      speed: 300,
+      timeout: 5000
+    });
 
+  }
+
+  // Verifica se existe uma imagem marcada com o atributo alt="destaque"
+  $('.coluna-direita article img[alt="destaque"]').each(function() {
+    // Se exitir, coloca o estilo correspondente
+    var imgLargura = $(this).width();
+    $(this).wrap('<div class="position-relative" ></div>');
+    $(this).parent().wrap('<div style="width:' + imgLargura + 'px"></div>');
+    $(this).before('<div class="corte-superior-esquerdo"></div>');
+    $(this).after('<div class="corte-inferior-direito"></div>');
+    $(this).parent().after('<div class="tarja-img azul-borges-bg"></div>');
+  });
+
+  // Faz a tarja das imagens ser sempre a largura delas - 55px
+  $('.tarja-img').each(function() {
+    var larguraPai = $(this).parent().width();
+    $(this).width(larguraPai - 55);
+  });
 });
-
-
-$('#form-contato').submit(function() {
-
-    $('.erro').hide();
-    var erro = false;
-
-    // Valida nome
-    if ($('#nome').val().length < 3) {
-        $('#nome').next().show();
-        erro = true;
-    }
-
-
-    // Valida email
-    var email = $("#email").val();
-    var emailFilter = /^.+@.+\..{2,}$/;
-    var illegalChars = /[\(\)\<\>\,\;\:\\\/\"\[\]]/
-    if (!(emailFilter.test(email)) || email.match(illegalChars)) {
-        $('#email').next().show();
-        erro = true;
-    }
-
-    // Valida assunto
-    if ($('#assunto').val() == '') {
-        $('#assunto').next().show();
-        erro = true;
-    }
-
-    // Valida mensagem
-    if ($('#msg').val() == '') {
-        $('#msg').next().show();
-        erro = true;
-    }
-
-    // Verifica se ocorreu algum erro
-    if (erro) {
-        alert("O formulário não foi preenchido corretamente.");
-        return false;
-    } else {
-        return true;
-    }
-
-
-});
-
-
-var submenuDelay = 0;
-
-$("#menu-item-foccus").hover(function() {
-    $('#submenu-noticias').hide();
-    clearTimeout(submenuDelay);
-    $('#submenu-foccus').slideDown(250);
-}, function() {
-    submenuDelay = setTimeout(function() {
-        $('#submenu-foccus').slideUp(150);
-    }, 250);
-});
-
-$("#submenu-foccus").hover(function() {
-    $('#submenu-noticias').hide();
-    clearTimeout(submenuDelay);
-    $('#submenu-foccus').slideDown(250);
-}, function() {
-    submenuDelay = setTimeout(function() {
-        $('#submenu-foccus').slideUp(150);
-    }, 250);
-});
-
-$("#menu-item-noticias").hover(function() {
-    $('#submenu-foccus').hide();
-    clearTimeout(submenuDelay);
-    $('#submenu-noticias').slideDown(250);
-}, function() {
-    submenuDelay = setTimeout(function() {
-        $('#submenu-noticias').slideUp(150);
-    }, 250);
-});
-
-$("#submenu-noticias").hover(function() {
-    $('#submenu-foccus').hide();
-    clearTimeout(submenuDelay);
-    $('#submenu-noticias').slideDown(250);
-}, function() {
-    submenuDelay = setTimeout(function() {
-        $('#submenu-noticias').slideUp(150);
-    }, 250);
-});
-
-
-$("#menu-item-foccus-mobile").click(function() {
-    $('#submenu-foccus-mobile').toggle('slow');
-});
-
-$("#menu-item-noticias-mobile").click(function() {
-    $('#submenu-noticias-mobile').toggle('slow');
-});
-
-
-$('.menu-mobile-icon > a').click(function() {
-    var menuDisplay = $('.menu-mobile').css('display');
-    
-    if (menuDisplay === 'none')
-        $('.menu-mobile').slideDown('slow');
-    else
-        $('.menu-mobile').slideUp('slow');
-});
-
-

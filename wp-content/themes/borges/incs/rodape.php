@@ -32,43 +32,5 @@
 
 <script type="text/javascript" src="<? bloginfo('template_url') ?>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<? bloginfo('template_url') ?>/js/cycle.js"></script>
+<script type="text/javascript" src="<? bloginfo('template_url') ?>/js/core.js"></script>
 
-<script type="text/javascript">
-
-  if ($('#slideshow').length > 0) {
-    $('#slideshow').cycle({
-      fx: 'fade',
-      speed: 300,
-      timeout: 5000
-    });
-
-  }
-</script>
-
-<?
-global $ehNoticia;
-// Se estiver numa página interna de notícias, verifica a existência de imagens com alt=destaque e adiciona o estilo próprio
-if (isset($ehNoticia)) {
-  ?>
-  <script type="text/javascript">
-
-    $('.coluna-direita article img[alt="destaque"]').each(function() {
-      var imgLargura = $(this).width();
-      $(this).wrap('<div class="position-relative" ></div>');
-      $(this).parent().wrap('<div style="width:' + imgLargura + 'px"></div>');
-      $(this).before('<div class="corte-superior-esquerdo"></div>');
-      $(this).after('<div class="corte-inferior-direito"></div>');
-      $(this).parent().after('<div class="tarja-img azul-borges-bg"></div>');
-   });
-
-  </script>
-  <?
-}
-?>
-<script type="text/javascript">
-  // Faz a tarja das imagens ser sempre a largura delas - 55px
-    $('.tarja-img').each(function() {
-      var larguraPai = $(this).parent().width();
-      $(this).width(larguraPai - 55);
-    });
-</script>
