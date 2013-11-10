@@ -10,7 +10,7 @@ get_template_part('incs/topo');
     <h1 class="azul-borges">Corpo Clínico</h1>
   </div>
 
-  <section class="float-left coluna-direita">
+  <section class="float-left coluna-esquerda">
     <article>
       <?
       $wp_query = new WP_Query(array('p' => _CORPO_CLINICO_TEXTO));

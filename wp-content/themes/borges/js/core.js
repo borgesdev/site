@@ -38,3 +38,12 @@ $('.localizar-no-mapa').click(function(){
   $('.mapa').html(mapa.replace(/\+/g, ' ')+'<p class="mapa-linha"></p>');
   return false;
 });
+
+$('.menu-topo-mobile-botao').click(function(){
+  var menu = $(this).next();
+  if (menu.css('display')=='none')
+    menu.slideDown();
+  else
+    menu.slideUp();
+  return false;
+});

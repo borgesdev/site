@@ -11,7 +11,7 @@ get_template_part('incs/topo');
     <h1 class="azul-borges">Resultado da busca</h1>
   </div>
 
-  <section class="float-left coluna-direita linha-boxes busca">
+  <section class="float-left coluna-esquerda linha-boxes busca">
     <?
     if (have_posts()) {
       $i = 1;

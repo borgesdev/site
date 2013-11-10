@@ -37,6 +37,10 @@
 
     <!-- Menu mobile -->
     <div class="menu-topo-mobile">
+      <div class="social">
+        <a href="#" title="Twitter" class="twitter"><img src="<? bloginfo('template_url') ?>/imgs/twitter.png" /></a>
+        <a href="#" title="Facebook" class="facebook"><img src="<? bloginfo('template_url') ?>/imgs/face.png" /></a>
+      </div>
       <div class="menu-topo-mobile-botao">
         <nav><ul><li class="azul-borges-bg"><div class="corte"></div><a href="#">Menu</a></li></ul></nav>
       </div>
@@ -59,9 +63,10 @@
     <div class="clear"></div>
     <div class="busca-topo float-right">
       <form action="<? bloginfo('url') ?>">
-        <input type="submit" value=""/>
+        <input type="submit" value="" class="marrom-borges-bg"/>
         <input type="text" name="s" />
       </form>
+      <div class="clear"></div>
     </div>
 
     <div class="clear"></div>

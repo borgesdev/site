@@ -12,7 +12,7 @@ $ehNoticia = TRUE;
     <h1 class="azul-borges">Notícias</h1>
   </div>
 
-  <section class="float-left coluna-direita noticias">
+  <section class="float-left coluna-esquerda noticias">
     <h2><? the_title() ?></h2>
     <article>
       <? the_content() ?>

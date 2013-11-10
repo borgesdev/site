@@ -13,7 +13,7 @@ the_post();
     <h1 class="azul-borges">Quem Somos</h1>
   </div>
 
-  <article class="float-left coluna-direita">
+  <article class="float-left coluna-esquerda">
 
     <div class="position-relative float-left" >
       <div class="corte-superior-esquerdo"></div>

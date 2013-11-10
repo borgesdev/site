@@ -12,7 +12,7 @@ $exame = $post;
     <h1 class="azul-borges">Exames</h1>
   </div>
 
-  <section class="float-left coluna-direita linha-boxes exames">
+  <section class="float-left coluna-esquerda linha-boxes exames">
     <aside class="float-left">
       <ul>
 
