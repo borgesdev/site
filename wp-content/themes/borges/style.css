@@ -20,7 +20,7 @@ ul { list-style-type: none;}
 .float-left {float: left}
 .clear { clear: both}
 .no-mg-right { margin-right: 0px !important}
-.site { width: 960px; margin: 12px auto}
+.site { max-width: 960px; margin: 12px auto}
 .position-relative { position: relative}
 
 /* Estilos reaproveitados ao longo do site */
@@ -33,25 +33,27 @@ ul { list-style-type: none;}
 .coluna-direita h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px}
 
 /* Estilo de seções específicas */
-.logo-topo a { display: block; color: transparent; background: url('imgs/logo.png') no-repeat; width: 275px; height: 118px}
+/*header { height: 133px}*/
+.logo-topo { display: block; color: transparent; background: url('imgs/logo.png') no-repeat; width: 28.65%; height: auto}
+.logo-topo a img { width: 100%; height: auto;}
 
-.social { margin: 12px 0px 6px 0px}
-.social a { display: inline-block; color: transparent;  width: 30px; height: 25px; background: url('imgs/social.png') }
+.social { margin: 12px 0px 6px 0px; width: 100%; text-align: right}
+.social .twitter img { width: 4.61%; height: auto; }
+.social .facebook img { width: 4.61%; height: auto;  }
 
-.social .twitter { background-position: 0px 0px;}
-.social .facebook { background-position: 32px 0px; }
-
-
-.menu-topo ul li { display: inline-block; width: 105px; height: 32px;text-align: center;padding: 16px 0px 0px 0px; position: relative}
+.menu-topo  { width: 67.71%}
+.menu-topo nav, .menu-topo ul { width: 100%}
+.menu-topo ul li { display: inline-block; width: 16.15%; height: 32px;text-align: center;padding: 16px 0px 0px 0px; position: relative; margin-right: 0.51%}
 .menu-topo ul li:hover { background: #7a8ca4;  cursor: pointer}
 .menu-topo ul li a { color: #ddd; display: inline-block; height: 100%; width: 100%}
 .menu-topo ul li a:hover { /*color: #fff;*/ text-decoration: none }
+.menu-topo-mobile { display: none}
 
 .corte {border-bottom: 14px transparent solid; display: inline-block; float: left; border-left: 14px #fff solid; position: absolute; top: 0px; left: 0px;}
 
-.busca-topo { margin: 14px 0px 0px 0px; width: 204px}
-.busca-topo input[type=text] { width: 168px; height: 26px; border: 1px solid #a28f55; display: block; float: left}
-.busca-topo input[type=submit] { width: 28px; height: 28px; background: url('imgs/busca.png'); border: 0px; margin: 0px 6px 0px 0px;  display: block; float: left}
+.busca-topo { margin: 14px 0px 0px 0px; width: 21.25%}
+.busca-topo input[type=text] { width: 80%; height: 26px; border: 1px solid #a28f55; display: block; float: left}
+.busca-topo input[type=submit] { width: 14%; height: 28px; background: url('imgs/busca.png'); border: 0px; margin: 0px 4% 0px 0px;  display: block; float: left}
 
 .conteudo { margin: 10px 0px}
 
@@ -122,3 +124,20 @@ aside.sidebar article { margin-bottom: 14px; }
 .tarja-azul-rodape section strong { color: #fff; font-weight: bold }
 
 .creditos a, .creditos a:hover, .creditos { color: #fff}
+
+
+/* ESTILOS MOBILE */
+@media screen and (max-width: 480px) {
+  body { margin: 0; padding: 0}
+  .site { margin: 0}
+  .logo-topo { width: 100%; height: auto; display: block }
+  .menu-topo { display: none }
+  .menu-topo-mobile { display: block}
+  .menu-topo-mobile ul { width: 100% }
+  .menu-topo-mobile-botao ul li { display: inline-block; width: 90%; height: 32px;text-align: center; padding: 16px 0px 0px 0px; position: relative; margin-right: 0.51%}
+  .menu-topo-mobile ul li:hover { background: #7a8ca4;  cursor: pointer}
+  .menu-topo-mobile ul li a { color: #ddd; display: inline-block; height: 100%; width: 100%}
+  .menu-topo-mobile ul li a:hover { /*color: #fff;*/ text-decoration: none }  
+  .social { position: absolute; top: 20px; left: 0; width: 100%}
+  .social .twitter img, .social .facebook img  { width: 12.5%}
+}

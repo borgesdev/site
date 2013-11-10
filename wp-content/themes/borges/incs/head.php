@@ -18,7 +18,7 @@ ob_start();
 
   <head>
 
-    <meta content="width=device-width, height=420, user-scalable=no" name="viewport"/>
+    <?/*<meta content="width=device-width, height=420, user-scalable=no" name="viewport"/>*/?>
 
     <base href="<?= get_bloginfo('url') ?>/" />
     <meta name="title" content="<?= $title ?>" />
