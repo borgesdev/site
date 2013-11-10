@@ -45,9 +45,9 @@
     }
     ?>  
     <div class="float-right creditos">
-      Desenvolvido por: <a href="mailto:magnofd@yahoo.com.br">Magno Dal Magro</a> e <a href="mailto:joaogabrielv@gmail.com">João Gabriel</a>
+      Site desenvolvido por: <a href="mailto:magnofd@yahoo.com.br">Magno Dal Magro</a> e <a href="mailto:joaogabrielv@gmail.com">João Gabriel</a>
     </div>
-    
+    <div class="clear"></div>
   </div>
 
 </div>
