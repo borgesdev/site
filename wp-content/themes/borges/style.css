@@ -45,9 +45,9 @@ a img {outline : none;}
 
 .menu-topo  { width: 67.71%}
 .menu-topo nav, .menu-topo ul { width: 100%}
-.menu-topo ul li { display: inline-block; width: 16.15%; height: 32px;text-align: center;padding: 16px 0px 0px 0px; position: relative; margin-right: 0.51%}
-.menu-topo ul li:hover { background: #7a8ca4;  cursor: pointer}
-.menu-topo ul li a { color: #ddd; display: inline-block; height: 100%; width: 100%}
+.menu-topo ul li { display: inline-block; width: 16.15%; height: 32px;text-align: center; padding: 14px 0px 0px 0px; position: relative; margin-right: 0.51%; }
+.menu-topo ul li:hover { background: #7a8ca4;  cursor: pointer; }
+.menu-topo ul li a { color: #ddd; display: inline-block; height: 100%; width: 100%; margin-top:4px}
 .menu-topo ul li a:hover { /*color: #fff;*/ text-decoration: none }
 .menu-topo-mobile { display: none}
 
@@ -57,11 +57,11 @@ a img {outline : none;}
 .busca-topo input[type=text] { width: 80%; height: 26px; border: 1px solid #a28f55; display: block; float: left}
 .busca-topo input[type=submit] { width: 14%; height: 28px; background: url('imgs/busca.png'); border: 0px; margin: 0px 4% 0px 0px;  display: block; float: left}
 
-.conteudo { margin: 15px 0px}
+.conteudo { margin: 17px 0px}
 
 .destaques-home { width: 240px; margin-top: 50px}
 .destaques-home article { margin-bottom: 30px}
-.destaques-home article h2 { font-size: 16px; }
+.destaques-home article h2 { font-size: 15px; font-weight: bold }
 .destaques-home a { font-size: 12px; color: #777  }
 .slideshow { margin: 0px 0px 26px 0px }
 .slideshow img { width: 702px; height: 385px}
