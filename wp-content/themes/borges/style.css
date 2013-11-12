@@ -30,7 +30,7 @@ a img {outline : none;}
 .azul-borges-bg { background-color: #5e789d}
 .marrom-borges { color: #a28f55}
 .marrom-borges-bg { background-color: #a28f55}
-.coluna-esquerda { width: 685px}
+.coluna-esquerda { width: 71.35%}
 .coluna-esquerda h2 { font-size: 1.4em; font-weight: bold; margin-bottom: 10px}
 .coluna-esquerda h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px}
 
@@ -70,7 +70,7 @@ a img {outline : none;}
 
 .titulo { position: relative; margin-bottom: 28px}
 
-.linha-titulo { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 8px; width: 952px }
+.linha-titulo { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 8px; width: 98% }
 
 .linha-boxes { }
 .linha-boxes article { border-top: 3px #5e789d solid; padding-top: 8px; width: 185px; margin-right: 8px; margin-bottom: 30px}
@@ -97,11 +97,12 @@ a img {outline : none;}
 .noticias article, .busca article { margin-right: 35px}
 
 /* EXAMES */
-.exames aside { width: 165px; margin-right: 38px;}
+.exames aside { width: 24.08%; margin-right: 5.54%;}
 .exames aside ul li { font-size: 1.3em; margin-bottom: 15px;}
-.exames article { width: 474px; border: 0px; padding: 0; margin: 0}
+.exames article { width: 69.66%; border: 0px; padding: 0; margin: 0}
 .exames article h1 { font-size: 1.5em; margin-bottom: 15px}
 .tarja-img { height: 15px; margin-bottom: 30px;}
+
 
 /* CONTATO */
 .contato-endereco h3 { font-size: 14px; font-weight: bold}
@@ -111,10 +112,10 @@ a img {outline : none;}
 .contato-endereco .telefones { width: 100px; font-size: 12px; margin-bottom: 10px; line-height: 19px;}
 
 /* SIDEBAR */
-aside.sidebar { width: 232px; background: url('imgs/sidebar-title-bg.png') repeat-x top center}
-aside.sidebar h2 { font-size: 1.2em; display: inline-block; background: #fff; padding-right: 18px; margin-bottom: 25px; font-weight: bold }
+aside.sidebar { width: 21.17%; background: url('imgs/sidebar-title-bg.png') repeat-x top center}
+aside.sidebar h2 { font-size: 1.2em; display: inline-block; background: #fff; padding-right: 7.75%; margin-bottom: 25px; font-weight: bold }
 aside.sidebar h3 { font-size: 0.9em; margin-bottom: 6px; height: 48px; overflow: hidden}
-aside.sidebar article img { margin-right: 10px; width: 81px; height: 67px}
+aside.sidebar article img { margin-right: 4.3%; width: 34.8%; height: auto}
 aside.sidebar article { margin-bottom: 14px; }
 
 /* RODAPE */
@@ -157,7 +158,7 @@ aside.sidebar article { margin-bottom: 14px; }
     float: right
   }  
 
-  #slideshow, aside, .slideshow  { display: none }
+  #slideshow, .sidebar, .slideshow  { display: none }
   .destaques-home { width: 100%}
   article { width: 90%; margin: auto}
   .coluna-esquerda { width: 100%; }
@@ -165,6 +166,8 @@ aside.sidebar article { margin-bottom: 14px; }
   .coluna-esquerda article, .linha-boxes article { width: 90%; margin: 12px auto; float: none; display: block}
   .coluna-esquerda .no-mg-right, .linha-boxes .no-mg-right { margin: auto !important; }
 
+  .exames aside.lista-exames  { width: 100%; display:block; text-align: center; border-bottom: 3px #5e789d solid; margin-bottom: 12px }
+  
   .rodape nav ul li {
     display: block;
     width: 100%;
