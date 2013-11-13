@@ -6,9 +6,10 @@
     ?>
     <article>
       <? the_post_thumbnail('post-thumbnail', array('class' => 'float-left')); ?>
-      <div>
+      <div class="titulo-box">
         <h3><? the_title() ?></h3>
         <a href="<? the_permalink() ?>">Saiba +</a>
+        <div class="clear"></div>
       </div>
       <div class="clear"></div>
     </article>
