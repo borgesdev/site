@@ -115,8 +115,9 @@ a img {outline : none;}
 aside.sidebar { width: 21.17%; background: url('imgs/sidebar-title-bg.png') repeat-x top center}
 aside.sidebar h2 { font-size: 1.2em; display: inline-block; background: #fff; padding-right: 7.75%; margin-bottom: 25px; font-weight: bold }
 aside.sidebar h3 { font-size: 0.9em; margin-bottom: 6px; height: 48px; overflow: hidden}
+aside.sidebar article div.titulo-box { width: 60.59%;display: block;float: right; margin-bottom: 14px;}
 aside.sidebar article img { margin-right: 4.3%; width: 34.8%; height: auto}
-aside.sidebar article { margin-bottom: 14px; }
+aside.sidebar article {  }
 
 /* RODAPE */
 .rodape nav ul { list-style-type: none}
