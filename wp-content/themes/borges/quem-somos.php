@@ -15,9 +15,9 @@ the_post();
 
   <article class="float-left coluna-esquerda">
 
-    <div class="position-relative float-left" >
+    <div class="position-relative float-left quem-somos-img" >
       <div class="corte-superior-esquerdo"></div>
-      <img src="<? bloginfo('template_url') ?>/imgs/borges.png" class="quem-somos-img" />
+      <img src="<? bloginfo('template_url') ?>/imgs/borges.png" />
       <div class="quem-somos-img-leg"><strong class="azul-borges">Dr. Borges de Carvalho (Foto - 1972)</strong></div>
     </div>
 

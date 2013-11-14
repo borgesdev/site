@@ -36,7 +36,6 @@ a img {outline : none;}
 .coluna-esquerda h3 { font-size: 1.2em; font-weight: bold; margin-bottom: 10px}
 
 /* Estilo de seções específicas */
-header { height: 146px}
 .logo-topo { display: block; color: transparent; background: url('imgs/logo.png') no-repeat; width: 28.65%; height: auto}
 .logo-topo a img { width: 100%; height: auto;}
 
@@ -54,7 +53,7 @@ header { height: 146px}
 
 .corte {border-bottom: 14px transparent solid; display: inline-block; float: left; border-left: 14px #fff solid; position: absolute; top: 0px; left: 0px;}
 
-.busca-topo { margin: 0px 0px 0px 0px; width: 21.25%; position: absolute; bottom: 0; right:0}
+.busca-topo { margin: 0px 0px 0px 0px; width: 21.25%; }
 .busca-topo input[type=text] { width: 80%; height: 26px; border: 1px solid #a28f55; display: block; float: left}
 .busca-topo input[type=submit] { width: 14%; height: 28px; background: url('imgs/busca.png') center; border: 0px; margin: 0px 4% 0px 0px;  display: block; float: left}
 
@@ -85,9 +84,10 @@ header { height: 146px}
 /* QUEM SOMOS */
 .corte-superior-esquerdo { border-top: 55px solid #fff; border-right: 55px solid transparent; position: absolute; top: 0px; left: 0px; z-index: 2000}
 .corte-inferior-direito { border-bottom: 55px solid #fff; border-left: 55px solid transparent; position: absolute; bottom: 0px; right: 0px; z-index: 1000}
-.quem-somos-img { width: 288px; height: 345px; margin-bottom: 10px}
+.quem-somos-img { width: 39.56%;  margin-bottom: 10px}
+.quem-somos-img img { width: 100%; height: auto; margin-bottom: 10px}
 .quem-somos-img-leg strong { font-size: 1.1em; font-weight: bold} 
-.texto-quem-somos { margin: 0px 0px 0px 25px; width: 365px; }
+.texto-quem-somos { margin: 0px 0px 0px 3.64%; width: 53.28%; }
 .texto-quem-somos a:last-of-type { color: #D54E21;  }
 
 /* CORPO CLÍNICO */
@@ -168,6 +168,8 @@ aside.sidebar article {  }
   .coluna-esquerda article, .linha-boxes article { width: 90%; margin: 12px auto; float: none; display: block}
   .coluna-esquerda .no-mg-right, .linha-boxes .no-mg-right { margin: auto !important; }
 
+  .quem-somos-img { width: 100%;  margin-bottom: 10px}
+  
   .exames aside.lista-exames  { width: 100%; display:block; text-align: center; border-bottom: 3px #5e789d solid; margin-bottom: 12px }
   
   .rodape nav ul li {
