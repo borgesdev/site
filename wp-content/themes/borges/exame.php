@@ -13,7 +13,7 @@ $exame = $post;
   </div>
 
   <section class="float-left coluna-esquerda linha-boxes exames">
-    <aside class="float-left">
+    <aside class="float-left lista-exames">
       <ul>
 
         <?
