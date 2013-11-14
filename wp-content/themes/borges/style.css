@@ -106,6 +106,7 @@ a img {outline : none;}
 
 
 /* CONTATO */
+.contato-esquerda { width:35%}
 .contato-endereco h3 { font-size: 14px; font-weight: bold}
 .contato-endereco h4 { font-size: 14px; margin-bottom: 10px}
 .contato-endereco p { line-height: 10px; font-size: 12px}
@@ -171,6 +172,8 @@ aside.sidebar article {  }
   .quem-somos-img { width: 100%;  margin-bottom: 10px}
   
   .exames aside.lista-exames  { width: 100%; display:block; text-align: center; border-bottom: 3px #5e789d solid; margin-bottom: 12px }
+  
+  
   
   .rodape nav ul li {
     display: block;

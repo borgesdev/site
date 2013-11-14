@@ -39,7 +39,7 @@ root {
 .mapa-linha { width: 94%; height: 1px; line-height: 100%; border-top: 19px solid #5e789d;  border-right:19px solid white;  z-index: 3000; margin-top:0px;  }
 
 
-  
+
 .mapa { width: 93%; height: 270px; margin-bottom:40px;}
 .contato-direita form input, select, textarea { border: 1px solid #5e789d; color: #5e789d; font-size: 16px; font-family: verdana;  width: 92.6%; padding: 3.4%; margin-bottom: 20px;}
 .contato-direita form input, select {height: 17px; }
@@ -95,7 +95,7 @@ root {
 
 .titulo2 { position: relative; margin-bottom: 28px; float: left}
 
-.linha-titulo-contato { border-bottom: 3px solid #a28f55; display: block; position: relative; top: 3px; left: 424px; width: 535px }
+.linha-titulo-contato { border-bottom: 3px solid #a28f55; display: block; position: absolute; top: 0px; right: 0; width: 55.72% }
 
 .dados{
   font-size: 16px;
@@ -116,3 +116,27 @@ root {
 }
 
 
+.titulo-contato-mobile { display: none}
+/* ESTILOS MOBILE */
+@media screen and (max-width: 480px) {
+  .contato-esquerda { width: 100%; float: none}
+  .contato-endereco { width: 100%; float: none}
+  .titulo { position: absolute; top:0}
+  .linha-titulo-contato { border-bottom: 3px solid #a28f55; display: block; position: absolute; top: 0px; right: 0; width: 85% }
+  .contato-direita { width: 95%; }
+  .mapa { width: 100%}
+  .titulo { display: none}
+  .titulo-contato-mobile { display: block; margin-bottom: 24px}
+  .titulo-contato-mobile h1 {
+    line-height: 100%;
+    border-left: 3px solid #a28f55;
+    display: table-cell;
+    margin: 0;
+    border-bottom: 3px solid #a28f55;
+    border-radius: 8px 0 0px 8px;
+    border-top: 3px solid #a28f55;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: normal; 
+  }
+}
