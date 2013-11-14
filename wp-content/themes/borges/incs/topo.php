@@ -1,6 +1,6 @@
 
 <div class="site">
-  <header>
+  <header class="position-relative">
 
     <div class="logo-topo float-left">
       <a href="<? bloginfo('url') ?>"><img src="<? bloginfo('template_url') ?>/imgs/logo.png" /></a>
