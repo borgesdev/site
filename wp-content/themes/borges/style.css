@@ -13,6 +13,7 @@
 a { text-decoration: none; color: #D54E21; font-size: inherit }
 a:hover { text-decoration: underline}
 p { font-size: 1.2em; margin-bottom: 10px}
+strong { font-weight: bold}
 ul { list-style-type: none;} 
 img { border: 0}
 a img {outline : none;}
