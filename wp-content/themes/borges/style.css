@@ -96,7 +96,7 @@ a img {outline : none;}
 .corpo-clinico article { margin-bottom: 30px}
 
 /* NOTICIAS */
-.noticias article, .busca article {width: 29.78%; margin-right: 5.3%}
+.noticias article, .busca article {/*width: 29.78%;*/ margin-right: 5.3%}
 
 /* EXAMES */
 .exames aside { width: 24.08%; margin-right: 5.54%;}
