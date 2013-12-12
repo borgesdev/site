@@ -17,6 +17,10 @@ strong { font-weight: bold}
 ul { list-style-type: none;} 
 img { border: 0}
 a img {outline : none;}
+article ul { list-style: disc; list-style-position: inside;}
+article ol {  list-style-position: inside; }
+article em, article i, article strong, article del {  font-size: 12px }
+article ul li, article ol li {  font-size: 13px }
 
 
 /* Estilos de uso geral */
