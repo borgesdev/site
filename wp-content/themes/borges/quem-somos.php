@@ -17,8 +17,8 @@ the_post();
 
     <div class="position-relative float-left quem-somos-img" >
       <div class="corte-superior-esquerdo"></div>
-      <img src="<? bloginfo('template_url') ?>/imgs/borges.png" />
-      <div class="quem-somos-img-leg"><strong class="azul-borges">Dr. Borges de Carvalho (Foto - 1972)</strong></div>
+      <? if (has_post_thumbnail()) the_post_thumbnail() ?>
+      <div class="quem-somos-img-leg"><strong class="azul-borges"><?=get_post(get_post_thumbnail_id())->post_content; ?></strong></div>
     </div>
 
     <div class="float-left texto-quem-somos">

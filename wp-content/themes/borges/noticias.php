@@ -18,7 +18,7 @@ get_template_part('incs/topo');
       the_post();
       ?>
 
-      <article class="float-left <?= $i % 3 == 0 ? 'no-mg-right' : ''; ?>">
+      <article class="float-left <?= $i % 4 == 0 ? 'no-mg-right' : ''; ?>">
         <? if (has_post_thumbnail()) { ?>
           <div class="img-box"><? the_post_thumbnail() ?></div> 
         <? } ?>
@@ -27,7 +27,7 @@ get_template_part('incs/topo');
       </article>   
 
       <?
-      echo $i % 3 == 0 ? '<div class="clear"></div>' : ''; 
+      echo $i % 4 == 0 ? '<div class="clear"></div>' : ''; 
       $i++;
     }
     ?>  

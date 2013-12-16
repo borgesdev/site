@@ -7,7 +7,7 @@ get_template_part('incs/topo');
 
   <div class='titulo'>
     <span class="linha-titulo"> </span>
-    <h1 class="azul-borges">Exames</h1>
+    <h1 class="azul-borges">Serviços</h1>
   </div>
 
   <section class="float-left coluna-esquerda linha-boxes exames">
@@ -36,12 +36,13 @@ get_template_part('incs/topo');
 
     <article class="float-left">
       <h1 class="azul-borges"><? the_title(); ?></h1>
-      <div class="position-relative">
-        <? the_post_thumbnail() ?>
-        <div class="corte-inferior-direito"></div>
-      </div>
-      <div class="tarja-img azul-borges-bg"></div>
-
+      <? if (has_post_thumbnail(get_the_ID())) { ?>
+        <div class="position-relative">
+          <? the_post_thumbnail() ?>
+          <div class="corte-inferior-direito"></div>
+        </div>
+        <div class="tarja-img azul-borges-bg"></div>
+      <? } ?>
 
       <? the_content() ?>
 

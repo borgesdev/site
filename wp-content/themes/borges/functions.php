@@ -160,8 +160,8 @@ if (!current_user_can('manage_options')) {
   function escondeDelLink() {
     //echo '<style type="text/css">#wp-admin-bar-view { display: none; }</style>';
     global $post;
-    if ($post->ID == _CONTATO) {
-      //echo '<style type="text/css">.deletion, #edit-slug-box { display: none; }</style>';
+    if ($post->ID == _CONTATO || $post->ID == _QUEM_SOMOS) {
+      echo '<style type="text/css">.deletion, #edit-slug-box, .submitdelete { display: none; }</style>';
     }
   }
 
@@ -206,6 +206,7 @@ if (!current_user_can('manage_options')) {
       $customUIScript .= '
         $(".trash").remove();
         $(".view").remove();
+        $(".submitdelete").remove();
         ';
     }
 
@@ -245,7 +246,7 @@ if (!current_user_can('manage_options')) {
   }
 
   // Remove as opções de Visualização
-  //add_filter('screen_options_show_screen', '__return_false');
+  add_filter('screen_options_show_screen', '__return_false');
 }
 
 //Altera o logo do login 

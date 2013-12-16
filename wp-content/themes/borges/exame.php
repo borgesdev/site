@@ -9,7 +9,7 @@ $exame = $post;
 
   <div class='titulo'>
     <span class="linha-titulo"> </span>
-    <h1 class="azul-borges">Exames</h1>
+    <h1 class="azul-borges">Serviços</h1>
   </div>
 
   <section class="float-left coluna-esquerda linha-boxes exames">
@@ -22,7 +22,7 @@ $exame = $post;
         while (have_posts()) {
           the_post();
           ?>
-        <li> <a class = "<?= get_the_ID() == $exame->ID ? 'azul-borges' : 'marrom-borges' ?>" href = "<? the_permalink() ?>"><? the_title() ?></a></li>
+          <li> <a class = "<?= get_the_ID() == $exame->ID ? 'azul-borges' : 'marrom-borges' ?>" href = "<? the_permalink() ?>"><? the_title() ?></a></li>
           <?
           $i++;
         }
@@ -31,14 +31,15 @@ $exame = $post;
     </aside>
 
     <article class="float-left">
-      <h1 class="azul-borges"><?=$exame->post_title; ?></h1>
-      <div class="position-relative">
-        <?= get_the_post_thumbnail($exame->ID) ?>
-        <div class="corte-inferior-direito"></div>
-      </div>    
-      <div class="tarja-img azul-borges-bg"></div>      
-      
-      <?=$exame->post_content ?>
+      <h1 class="azul-borges"><?= $exame->post_title; ?></h1>
+      <? if (has_post_thumbnail($exame->ID)) { ?>
+        <div class="position-relative">
+          <?= get_the_post_thumbnail($exame->ID) ?>
+          <div class="corte-inferior-direito"></div>
+        </div>    
+        <div class="tarja-img azul-borges-bg"></div>      
+      <? } ?>
+      <?= $exame->post_content ?>
     </article>
 
   </section>
