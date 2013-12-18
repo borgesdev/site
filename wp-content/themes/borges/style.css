@@ -108,6 +108,7 @@ article ul li, article ol li {  font-size: 13px }
 .exames article { width: 69.66%; border: 0px; padding: 0; margin: 0}
 .exames article h1 { font-size: 1.5em; margin-bottom: 15px}
 .tarja-img { height: 15px; margin-bottom: 30px;}
+.lista-exames-abaixo { display: none}
 
 
 /* CONTATO */
@@ -175,9 +176,10 @@ aside.sidebar article {  }
   .coluna-esquerda .no-mg-right, .linha-boxes .no-mg-right { margin: auto !important; }
 
   .quem-somos-img { width: 100%;  margin-bottom: 10px}
+  .texto-quem-somos { width: 100%}
   
   .exames aside.lista-exames  { width: 100%; display:block; text-align: center; border-bottom: 3px #5e789d solid; margin-bottom: 12px }
-  
+  .lista-exames-abaixo { display: block}
   
   
   .rodape nav ul li {

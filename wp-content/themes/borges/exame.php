@@ -42,6 +42,24 @@ $exame = $post;
       <?= $exame->post_content ?>
     </article>
 
+    <aside class="float-left lista-exames lista-exames-abaixo">
+      <h3>Mais serviços:</h3>
+      <ul>
+
+        <?
+        $wp_query = new WP_Query(array('cat' => _EXAMES));
+        $i = 0;
+        while (have_posts()) {
+          the_post();
+          ?>
+          <li> <a class="<?= $i == 0 ? 'azul-borges' : 'marrom-borges' ?>" href = "<? the_permalink() ?>"><? the_title() ?></a></li>
+          <?
+          $i++;
+        }
+        ?>    
+      </ul>
+    </aside>        
+    
   </section>
 
   <?

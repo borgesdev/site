@@ -12,6 +12,7 @@ get_template_part('incs/topo');
   </div>
 
   <section class="float-left coluna-esquerda linha-boxes busca">
+    <h3>Sua busca por "<em><strong><?=  strip_tags($_GET['s'])?></strong></em>" retornou os seguintes resultados:<br /></h3>
     <?
     if (have_posts()) {
       $i = 1;
@@ -19,7 +20,7 @@ get_template_part('incs/topo');
         the_post();
         ?>
 
-        <article class="float-left <?= $i % 3 == 0 ? 'no-mg-right' : ''; ?>">
+        <article class="float-left <?= $i % 4 == 0 ? 'no-mg-right' : ''; ?>">
           <? if (has_post_thumbnail()) { ?>
             <div class="img-box"><? the_post_thumbnail() ?></div> 
           <? } ?>
@@ -28,7 +29,7 @@ get_template_part('incs/topo');
         </article>   
 
         <?
-        echo $i % 3 == 0 ? '<div class="clear"></div>' : '';
+        echo $i % 4 == 0 ? '<div class="clear"></div>' : '';
         $i++;
       }
     } else {
