@@ -49,7 +49,7 @@ get_template_part('incs/topo');
     </article>
 
     <aside class="float-left lista-exames lista-exames-abaixo">
-      <h3>Mais serviços:</h3>
+      <h3><br />Mais serviços:</h3>
       <ul>
         <?
         $wp_query = new WP_Query(array('cat' => _EXAMES));
