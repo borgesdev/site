@@ -48,7 +48,7 @@ article ul li, article ol li {  font-size: 13px }
 .social .twitter img { width: 4.61%; height: auto; }
 .social .facebook img { width: 4.61%; height: auto;  }
 
-.menu-topo  { width: 67.71%}
+.menu-topo  { width: 67.71%; margin-top: 60px}
 .menu-topo nav, .menu-topo ul { width: 100%}
 .menu-topo ul li { display: inline-block; width: 16.15%; height: 32px;text-align: center; padding: 14px 0px 0px 0px; position: relative; margin-right: 0.51%; }
 .menu-topo ul li:hover { background: #7a8ca4;  cursor: pointer; }

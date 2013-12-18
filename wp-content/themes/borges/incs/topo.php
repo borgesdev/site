@@ -8,13 +8,13 @@
 
 
     <div class="menu-topo float-right">
-
+<?/*
       <div class="social">
         <a href="#" title="Twitter" class="twitter"><img src="<? bloginfo('template_url') ?>/imgs/twitter.png" /></a>
         <a href="#" title="Facebook" class="facebook"><img src="<? bloginfo('template_url') ?>/imgs/face.png" /></a>
       </div>
       <div class="clear"></div>
-
+*/?>
       <nav class="float-right">
         <ul>
           <?php
