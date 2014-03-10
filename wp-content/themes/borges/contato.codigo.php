@@ -28,8 +28,8 @@ if (isset($_POST) && !empty($_POST)) {
   $phpMailer->Password = 'n@0r35p0nd@';
   $phpMailer->Port = 587;
  
-  $phpMailer->AddAddress('joaogabrielv@gmail.com');
-  $phpMailer->AddAddress('contato@borgesdecarvalhootorrinos.com.br');
+  //$phpMailer->AddAddress('joaogabrielv@gmail.com');
+  $phpMailer->AddAddress('borgesdecarvalho16@yahoo.com.br');
 
   if (!$phpMailer->Send()) {
     echo $phpMailer->ErrorInfo;
