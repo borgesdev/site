@@ -193,3 +193,8 @@ aside.sidebar article {  }
   .creditos { margin-top: 40px;}
 
 }
+
+.coluna-esquerda * {
+  max-width: 100% !important;
+  height: auto;
+}
